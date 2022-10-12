@@ -1,0 +1,46 @@
+{
+    "name": "next-website",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "postbuild": "next-sitemap",
+        "start": "next start",
+        "lint": "next lint",
+        "test": "jest",
+        "test:ci": "jest --ci",
+        "ts:check": "tsc --noEmit",
+        "debug": "set NODE_OPTIONS=--inspect&&next",
+        "prettier:check": "prettier --check .",
+        "prettier:fix": "prettier --write .",
+        "clean": "rm -rf .next/"
+    },
+    "dependencies": {
+        "@portabletext/react": "^1.0.6",
+        "@portabletext/types": "^1.0.3",
+        "next": "12.3.1",
+        "next-sanity": "^0.8.4",
+        "next-sanity-image": "^4.1.0",
+        "next-seo": "^5.5.0",
+        "next-sitemap": "^3.1.23",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "common": "workspace:*"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.7",
+        "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+        "@types/node": "^18.7.23",
+        "@types/react": "18.0.21",
+        "@types/react-dom": "18.0.6",
+        "autoprefixer": "^10.4.12",
+        "eslint": "8.24.0",
+        "eslint-config-next": "12.3.1",
+        "postcss": "^8.4.16",
+        "prettier": "^2.7.1",
+        "prettier-plugin-tailwindcss": "^0.1.13",
+        "tailwindcss": "^3.1.8",
+        "typescript": "4.8.4"
+    }
+}
