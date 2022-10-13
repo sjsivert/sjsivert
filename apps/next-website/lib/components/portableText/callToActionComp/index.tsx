@@ -14,14 +14,14 @@ interface Props {
  */
 export default function CallToActionComp({ fields }: Props): JSX.Element {
     return (
-        <div className="my-6 md:my-12">
-            <p>{fields.title}</p>
+        <div className="my-6 md:my-12 border border-slate-800 p-4">
+            <p className="font-bold">{fields.title}</p>
             <div>
                 <PortableText value={fields.bodyBlock} components={callToActionSerializer} />
             </div>
-            <div>
+            <div className="my-4 px-4 py-2 bg-slate-500 text-center">
                 <Link href={fields.callToActionButton.url}>
-                    <a>{fields.callToActionButton.label}</a>
+                    <a className="text-white">{fields.callToActionButton.label}</a>
                 </Link>
             </div>
         </div>
