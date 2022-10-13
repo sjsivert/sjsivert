@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ReactNode } from "react";
 
 import { MainMenuAndFooter } from "@/lib/types/sanity/allPages";
@@ -12,7 +13,11 @@ export default function Layout({ mainMenuAndFooterData, previewActive, children 
     return (
         <div className="prose container mx-auto">
             <header className="bg-slate-500 px-2 text-center">
-                <h2>Header</h2>
+                <h2>
+                    <Link href="/">
+                        <a>Header</a>
+                    </Link>
+                </h2>
             </header>
             <main className="px-4">{children}</main>
             <footer className="bg-slate-500 px-2 text-center">

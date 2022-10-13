@@ -2,13 +2,13 @@
 import type { GetStaticProps, GetStaticPaths } from "next";
 
 import Layout from "@/lib/components/Layout";
+import ArticleComponent from "@/lib/components/pageComponents/ArticleComponent";
 import { getMainMenuAndFooterData } from "@/lib/content/sanity/allPages";
 import { getArticlesBySlug } from "@/lib/content/sanity/articles";
 import { articleGroq } from "@/lib/content/sanity/articles/groq";
 import { usePreviewSubscription } from "@/lib/hooks/useSanityPreviewSubscription";
 import { MainMenuAndFooter } from "@/lib/types/sanity/allPages";
 import { Article as ArticlePageType } from "@/lib/types/sanity/article";
-import { ArticleCollection } from "@/lib/types/sanity/article";
 import { filterDataToSingleItem } from "@/lib/utils/sanity";
 
 interface Props {
@@ -32,7 +32,7 @@ export default function ArticlePage({ mainMenuAndFooterData, articlePageDocument
 
     return (
         <Layout mainMenuAndFooterData={mainMenuAndFooterData}>
-            <h1>Article page {currentPage.title}</h1>
+            <ArticleComponent articlePageDocument={currentPage} />
         </Layout>
     );
 }

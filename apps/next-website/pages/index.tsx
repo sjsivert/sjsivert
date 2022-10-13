@@ -1,4 +1,5 @@
 import type { GetStaticProps } from "next";
+import Link from "next/link";
 
 import Layout from "@/lib/components/Layout";
 import { getMainMenuAndFooterData } from "@/lib/content/sanity/allPages";
@@ -29,6 +30,18 @@ export default function Home({ mainMenuAndFooterData, homePageDocument, preview 
     return (
         <Layout mainMenuAndFooterData={mainMenuAndFooterData}>
             <h1>Homepage {currentPage.title}</h1>
+            <ul>
+                <li>
+                    <Link href="/it-s-a-landing-page">
+                        <a>Demo landing page</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/articles">
+                        <a>List articles</a>
+                    </Link>
+                </li>
+            </ul>
         </Layout>
     );
 }
