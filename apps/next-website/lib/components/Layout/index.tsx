@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { ReactNode } from "react";
 
+import FooterComp from "@/lib/components/footer";
+import MainMenuComp from "@/lib/components/mainMenu";
 import { MainMenuAndFooter } from "@/lib/types/sanity/allPages";
 
 interface Props {
@@ -11,18 +12,12 @@ interface Props {
 
 export default function Layout({ mainMenuAndFooterData, previewActive, children }: Props): JSX.Element {
     return (
-        <div className="prose container mx-auto">
-            <header className="bg-slate-500 px-2 text-center">
-                <h2>
-                    <Link href="/">
-                        <a>Header</a>
-                    </Link>
-                </h2>
-            </header>
-            <main className="px-4">{children}</main>
-            <footer className="bg-slate-500 px-2 text-center">
-                <h2>Footer</h2>
-            </footer>
+        <div>
+            <MainMenuComp mainMenuData={mainMenuAndFooterData.mainMenu} previewActive={previewActive} />
+            <div className="prose container mx-auto mt-8 mb-24">
+                <main className="px-4">{children}</main>
+            </div>
+            <FooterComp footerData={mainMenuAndFooterData.footer} />
         </div>
     );
 }

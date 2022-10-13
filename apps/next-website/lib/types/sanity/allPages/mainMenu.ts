@@ -1,3 +1,5 @@
+import SchemaType from "common/sanity/SchemaType";
+
 import { SanityDocument, SanityObject } from "@/lib/types/sanity/common";
 
 /**
@@ -5,9 +7,9 @@ import { SanityDocument, SanityObject } from "@/lib/types/sanity/common";
  * This is the item which can actually be clicked
  */
 export interface MainMenuActionItem extends SanityObject {
-    _type: "mainMenuActionItem";
+    _type: SchemaType.MAIN_MENU_ACTION_ITEM_OBJECT;
     label: string;
-    icon?: string;
+    icon?: "home" | "document" | "newspaper";
     url: string;
 }
 
@@ -16,7 +18,7 @@ export interface MainMenuActionItem extends SanityObject {
  * with action items (see MainMenuActionItem)
  */
 export interface MainMenuItem extends SanityObject {
-    _type: "mainMenuItem";
+    _type: SchemaType.MAIN_MENU_ITEM_OBJECT;
     label: string;
     subItems: Array<MainMenuActionItem>;
 }

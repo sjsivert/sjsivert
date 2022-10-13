@@ -26,7 +26,6 @@ export default {
 				list: [
 					{ title: "Home", value: "home" },
 					{ title: "Document", value: "document" },
-					{ title: "Presentation Chart Bar", value: "presentation-chart-bar" },
 					{ title: "Newspaper", value: "newspaper" },
 				],
 			},
