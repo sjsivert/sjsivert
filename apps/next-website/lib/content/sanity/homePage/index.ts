@@ -1,5 +1,5 @@
 import { getSanityClient } from "@/lib/clients/sanityClient";
-import { HomePage } from "@/lib/types/sanity/landingPage";
+import { LandingPageBase } from "@/lib/types/sanity/landingPage";
 
 import { homePageGroq } from "./groq";
 
@@ -8,7 +8,7 @@ import { homePageGroq } from "./groq";
  * @param preview
  * @returns
  */
-export async function getHomePageDocuments(preview: boolean): Promise<Array<HomePage>> {
-    const data = await getSanityClient(preview).fetch<Array<HomePage>>(homePageGroq);
+export async function getHomePageDocuments(preview: boolean): Promise<Array<LandingPageBase>> {
+    const data = await getSanityClient(preview).fetch<Array<LandingPageBase>>(homePageGroq);
     return data;
 }

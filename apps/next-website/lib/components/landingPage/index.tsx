@@ -4,7 +4,7 @@ import GlobalCompAlert from "@/lib/components/globalComponents/alert";
 import GlobalCompInfoBox from "@/lib/components/globalComponents/infoBox";
 import { GlobalAlert } from "@/lib/types/sanity/globalComponents/alert";
 import { GlobalInfoBox } from "@/lib/types/sanity/globalComponents/infoBox";
-import { LandingPage as LandingPagePageType } from "@/lib/types/sanity/landingPage";
+import { LandingPageBase as LandingPageBaseType } from "@/lib/types/sanity/landingPage";
 import { PageItemCallToActionBar } from "@/lib/types/sanity/landingPage/pageItemCallToActionBar";
 import { PageItemHero } from "@/lib/types/sanity/landingPage/pageItemHero";
 
@@ -12,7 +12,7 @@ import LandingPageCallToActionBar from "./callToActionBar";
 import LandingPageHero from "./hero";
 
 interface Props {
-    landingPage: LandingPagePageType;
+    landingPage: LandingPageBaseType;
 }
 
 /**

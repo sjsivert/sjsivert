@@ -16,9 +16,9 @@ export type LandingPageComponents =
     | GlobalInfoBox;
 
 /**
- * Defines the data for a Home page document
+ * Defines the data for a base landing page (a landing page without a slug, e.g. the Home page)
  */
-export interface HomePage extends SanityDocument {
+export interface LandingPageBase extends SanityDocument {
     _type: SchemaType.PAGE_HOME;
     title: string;
     description: string;
@@ -28,6 +28,6 @@ export interface HomePage extends SanityDocument {
 /**
  * A general LandingPage is a HomePage with a slug
  */
-export interface LandingPage extends HomePage {
+export interface LandingPage extends LandingPageBase {
     slug: string;
 }

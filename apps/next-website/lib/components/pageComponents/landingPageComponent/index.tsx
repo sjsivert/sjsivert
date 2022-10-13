@@ -1,8 +1,8 @@
 import LandingPageSerializer from "@/lib/components/landingPage";
-import { LandingPage as LandingPagePageType } from "@/lib/types/sanity/landingPage";
+import { LandingPageBase as HomePageType } from "@/lib/types/sanity/landingPage";
 
 interface Props {
-    landingPageDocument: LandingPagePageType;
+    landingPageDocument: HomePageType;
 }
 
 export default function LandingPageComponent({ landingPageDocument }: Props): JSX.Element {

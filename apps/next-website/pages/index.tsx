@@ -2,17 +2,18 @@ import type { GetStaticProps } from "next";
 import Link from "next/link";
 
 import Layout from "@/lib/components/Layout";
+import LandingPageComponent from "@/lib/components/pageComponents/landingPageComponent";
 import { getMainMenuAndFooterData } from "@/lib/content/sanity/allPages";
 import { getHomePageDocuments } from "@/lib/content/sanity/homePage/";
 import { homePageGroq } from "@/lib/content/sanity/homePage/groq";
 import { usePreviewSubscription } from "@/lib/hooks/useSanityPreviewSubscription";
 import { MainMenuAndFooter } from "@/lib/types/sanity/allPages";
-import { HomePage } from "@/lib/types/sanity/landingPage";
+import { LandingPageBase } from "@/lib/types/sanity/landingPage";
 import { filterDataToSingleItem } from "@/lib/utils/sanity";
 
 interface Props {
     mainMenuAndFooterData: MainMenuAndFooter;
-    homePageDocument: HomePage;
+    homePageDocument: LandingPageBase;
     preview: boolean;
 }
 
@@ -22,26 +23,14 @@ export default function Home({ mainMenuAndFooterData, homePageDocument, preview 
         enabled: preview,
     });
 
-    const currentPage = filterDataToSingleItem<HomePage>(
+    const currentPage = filterDataToSingleItem<LandingPageBase>(
         Array.isArray(previewData) ? previewData : [previewData],
         preview
     );
 
     return (
         <Layout mainMenuAndFooterData={mainMenuAndFooterData}>
-            <h1>Homepage {currentPage.title}</h1>
-            <ul>
-                <li>
-                    <Link href="/it-s-a-landing-page">
-                        <a>Demo landing page</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/articles">
-                        <a>List articles</a>
-                    </Link>
-                </li>
-            </ul>
+            <LandingPageComponent landingPageDocument={currentPage} />
         </Layout>
     );
 }
@@ -55,7 +44,7 @@ export const getStaticProps: GetStaticProps = async ({ preview }) => {
     ]);
 
     // Filter out based on preview
-    const homePageDocument = filterDataToSingleItem<HomePage>(homePageDocuments, previewEnabled);
+    const homePageDocument = filterDataToSingleItem<LandingPageBase>(homePageDocuments, previewEnabled);
 
     if (!homePageDocument) {
         return { notFound: true };
