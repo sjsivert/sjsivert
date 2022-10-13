@@ -10,9 +10,10 @@ interface Props {
 export default function YouTubeComp({ url }: Props): JSX.Element {
     const videoId = getYouTubeId(url);
     return (
-        <div className="aspect-w-16 aspect-h-9">
+        <div className="aspect-video">
             <iframe
                 src={`https://www.youtube.com/embed/${videoId}`}
+                className="w-full aspect-video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
