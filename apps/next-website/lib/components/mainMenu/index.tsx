@@ -31,7 +31,11 @@ export default function MainMenuComp({ mainMenuData, previewActive }: Props): JS
                 </li>
             );
         } else {
-            return <li className="text-gray-400">{item.label}</li>;
+            return (
+                <li key={item._key} className="text-gray-400">
+                    {item.label}
+                </li>
+            );
         }
     });
 

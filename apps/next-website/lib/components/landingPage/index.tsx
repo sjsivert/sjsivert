@@ -23,15 +23,19 @@ export default function LandingPageSerializer({ landingPage }: Props): JSX.Eleme
     const comps = landingPage.pageItems.map((comp) => {
         switch (comp._type) {
             case SchemaType.LANDING_PAGE_ITEM_HERO:
-                return <LandingPageHero data={comp as PageItemHero} />;
+                const heroComp = comp as PageItemHero;
+                return <LandingPageHero data={heroComp} key={heroComp._key} />;
             case SchemaType.LANDING_PAGE_ITEM_CALL_TO_ACTION_BAR:
-                return <LandingPageCallToActionBar data={comp as PageItemCallToActionBar} />;
+                const ctaComp = comp as PageItemCallToActionBar;
+                return <LandingPageCallToActionBar data={ctaComp} key={ctaComp._key} />;
             case SchemaType.GLOBAL_COMP_ALERT:
-                return <GlobalCompAlert alertProps={comp as GlobalAlert} />;
+                const glAlertComp = comp as GlobalAlert;
+                return <GlobalCompAlert alertProps={glAlertComp} key={glAlertComp._id} />;
             case SchemaType.GLOBAL_COMP_INFO_BOX:
-                return <GlobalCompInfoBox infoBoxProps={comp as GlobalInfoBox} />;
+                const glInfoBoxComp = comp as GlobalInfoBox;
+                return <GlobalCompInfoBox infoBoxProps={glInfoBoxComp} key={glInfoBoxComp._id} />;
             default:
-                return <p>Default component</p>;
+                return <p key={Math.random()}>Default component</p>;
         }
     });
 

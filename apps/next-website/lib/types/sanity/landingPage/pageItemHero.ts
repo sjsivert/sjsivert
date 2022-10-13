@@ -1,10 +1,10 @@
 import SchemaType from "common/sanity/SchemaType";
 
 import { AccessibleImage } from "@/lib/types/sanity/accessibleImage";
+import { SanityObject } from "@/lib/types/sanity/common";
 
-export interface PageItemHero {
+export interface PageItemHero extends SanityObject {
     _type: SchemaType.LANDING_PAGE_ITEM_HERO;
-    _key: string;
 
     // Settings (all required)
     layout: "imageLeft" | "imageRight";
