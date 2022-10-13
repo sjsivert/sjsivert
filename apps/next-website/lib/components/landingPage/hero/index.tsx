@@ -12,8 +12,8 @@ export default function LandingPageHero({ data }: Props) {
     const callToActionLabel = data.callToActionLabel;
 
     return (
-        <div>
-            <h2>{title}</h2>
+        <div className="bg-blue-500 text-center px-4 py-2">
+            <h3>{title}</h3>
             <p>{bodyText}</p>
             <Link href={data.callToActionUrl}>
                 <a>{callToActionLabel}</a>

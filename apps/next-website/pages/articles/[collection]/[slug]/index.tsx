@@ -2,7 +2,7 @@
 import type { GetStaticProps, GetStaticPaths } from "next";
 
 import Layout from "@/lib/components/Layout";
-import ArticleComponent from "@/lib/components/pageComponents/ArticleComponent";
+import ArticleComponent from "@/lib/components/pageComponents/articlePageComponent";
 import { getMainMenuAndFooterData } from "@/lib/content/sanity/allPages";
 import { getArticlesBySlug } from "@/lib/content/sanity/articles";
 import { articleGroq } from "@/lib/content/sanity/articles/groq";

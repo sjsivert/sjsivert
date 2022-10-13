@@ -1,6 +1,7 @@
 import type { GetStaticProps, GetStaticPaths } from "next";
 
 import Layout from "@/lib/components/Layout";
+import LandingPageComponent from "@/lib/components/pageComponents/landingPageComponent";
 import { getMainMenuAndFooterData } from "@/lib/content/sanity/allPages";
 import { getLandingPageDocumentsBySlug } from "@/lib/content/sanity/landingPages";
 import { landingPageGroq } from "@/lib/content/sanity/landingPages/groq";
@@ -30,7 +31,7 @@ export default function LandingPage({ mainMenuAndFooterData, landingPageDocument
 
     return (
         <Layout mainMenuAndFooterData={mainMenuAndFooterData}>
-            <h1>Landing page {currentPage.title}</h1>
+            <LandingPageComponent landingPageDocument={currentPage} />
         </Layout>
     );
 }

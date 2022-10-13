@@ -19,14 +19,15 @@
     "dependencies": {
         "@portabletext/react": "^1.0.6",
         "@portabletext/types": "^1.0.3",
+        "common": "*",
+        "ui": "*",
         "next": "12.3.1",
         "next-sanity": "^0.8.4",
         "next-sanity-image": "^4.1.0",
         "next-seo": "^5.5.0",
         "next-sitemap": "^3.1.23",
         "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "common": "workspace:*"
+        "react-dom": "18.2.0"
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.7",
@@ -37,6 +38,7 @@
         "autoprefixer": "^10.4.12",
         "eslint": "8.24.0",
         "eslint-config-next": "12.3.1",
+        "next-transpile-modules": "^9.1.0",
         "postcss": "^8.4.16",
         "prettier": "^2.7.1",
         "prettier-plugin-tailwindcss": "^0.1.13",

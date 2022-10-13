@@ -11,7 +11,7 @@ export default function LandingPageCallToActionBar({ data }: Props) {
     const callToActionLabel = data.callToActionLabel;
 
     return (
-        <div className="bg bg-red-400">
+        <div className="px-4 py-2 bg-red-400">
             <div>
                 <p>{bodyText}</p>
                 <Link href={data.callToActionUrl} passHref>

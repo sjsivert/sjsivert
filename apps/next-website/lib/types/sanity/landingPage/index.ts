@@ -1,3 +1,5 @@
+import SchemaType from "common/sanity/SchemaType";
+
 import { SanityDocument } from "@/lib/types/sanity/common";
 import { GlobalAlert } from "@/lib/types/sanity/globalComponents/alert";
 import { GlobalInfoBox } from "@/lib/types/sanity/globalComponents/infoBox";
@@ -17,7 +19,7 @@ export type LandingPageComponents =
  * Defines the data for a Home page document
  */
 export interface HomePage extends SanityDocument {
-    _type: "pageHome";
+    _type: SchemaType.PAGE_HOME;
     title: string;
     description: string;
     pageItems: Array<LandingPageComponents>;
@@ -28,14 +30,4 @@ export interface HomePage extends SanityDocument {
  */
 export interface LandingPage extends HomePage {
     slug: string;
-}
-
-/**
- * The Sanity types for all Landing Page items/components
- * (the _types found for «pageItems»)
- */
-export enum ComponentType {
-    HERO = "landingPageItemHero",
-    CALL_TO_ACTION_BAR = "landingPageItemCallToActionBar",
-    ARTICLE_SECTION = "landingPageItemArticleSection",
 }

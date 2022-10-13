@@ -1,9 +1,9 @@
+import SchemaType from "common/sanity/SchemaType";
+
 import { AccessibleImage } from "@/lib/types/sanity/accessibleImage";
 
-import { ComponentType } from "./index";
-
 export interface PageItemHero {
-    _type: ComponentType.HERO;
+    _type: SchemaType.LANDING_PAGE_ITEM_HERO;
     _key: string;
 
     // Settings (all required)

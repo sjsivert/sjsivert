@@ -1,9 +1,9 @@
+import SchemaType from "common/sanity/SchemaType";
+
 import { Article } from "@/lib/types/sanity/article";
 
-import { ComponentType } from "./index";
-
 export interface PageItemArticleSection {
-    _type: ComponentType.ARTICLE_SECTION;
+    _type: SchemaType.LANDING_PAGE_ITEM_ARTICLE_SECTION;
     _key: string;
     hideHeader?: boolean;
     title: string;
