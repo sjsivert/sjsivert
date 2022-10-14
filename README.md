@@ -2,6 +2,10 @@
 
 This monorepo is meant as a template for creating new projects when working with Sanity, Next.js and React components. The repo is meant as a "guide". You _can_ clone the repo and adjust it to your needs, but it's probably better to start your own monorepo and pick individual parts from this repo.
 
+## Documentation
+
+Documentation for the different apps and packages can be found inside that app or package.
+
 ## What's inside?
 
 This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. It includes the following packages/apps:
