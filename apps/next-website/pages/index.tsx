@@ -12,49 +12,49 @@ import { LandingPageBase } from "@/lib/types/sanity/landingPage";
 import { filterDataToSingleItem } from "@/lib/utils/sanity";
 
 interface Props {
-    mainMenuAndFooterData: MainMenuAndFooter;
-    homePageDocument: LandingPageBase;
-    preview: boolean;
+	mainMenuAndFooterData: MainMenuAndFooter;
+	homePageDocument: LandingPageBase;
+	preview: boolean;
 }
 
 export default function Home({ mainMenuAndFooterData, homePageDocument, preview }: Props) {
-    const { data: previewData } = usePreviewSubscription(homePageGroq, {
-        initialData: homePageDocument,
-        enabled: preview,
-    });
+	const { data: previewData } = usePreviewSubscription(homePageGroq, {
+		initialData: homePageDocument,
+		enabled: preview,
+	});
 
-    const currentPage = filterDataToSingleItem<LandingPageBase>(
-        Array.isArray(previewData) ? previewData : [previewData],
-        preview
-    );
+	const currentPage = filterDataToSingleItem<LandingPageBase>(
+		Array.isArray(previewData) ? previewData : [previewData],
+		preview
+	);
 
-    return (
-        <Layout mainMenuAndFooterData={mainMenuAndFooterData}>
-            <LandingPageComponent landingPageDocument={currentPage} />
-        </Layout>
-    );
+	return (
+		<Layout mainMenuAndFooterData={mainMenuAndFooterData}>
+			<LandingPageComponent landingPageDocument={currentPage} />
+		</Layout>
+	);
 }
 
 export const getStaticProps: GetStaticProps = async ({ preview }) => {
-    const previewEnabled: boolean = preview || false;
-    // Get header and footer data
-    const [mainMenuAndFooterData, homePageDocuments] = await Promise.all([
-        getMainMenuAndFooterData(),
-        getHomePageDocuments(previewEnabled),
-    ]);
+	const previewEnabled: boolean = preview || false;
+	// Get header and footer data
+	const [mainMenuAndFooterData, homePageDocuments] = await Promise.all([
+		getMainMenuAndFooterData(),
+		getHomePageDocuments(previewEnabled),
+	]);
 
-    // Filter out based on preview
-    const homePageDocument = filterDataToSingleItem<LandingPageBase>(homePageDocuments, previewEnabled);
+	// Filter out based on preview
+	const homePageDocument = filterDataToSingleItem<LandingPageBase>(homePageDocuments, previewEnabled);
 
-    if (!homePageDocument) {
-        return { notFound: true };
-    }
+	if (!homePageDocument) {
+		return { notFound: true };
+	}
 
-    const props: Props = {
-        mainMenuAndFooterData,
-        homePageDocument,
-        preview: previewEnabled,
-    };
+	const props: Props = {
+		mainMenuAndFooterData,
+		homePageDocument,
+		preview: previewEnabled,
+	};
 
-    return { props, revalidate: 60 * 5 };
+	return { props, revalidate: 60 * 5 };
 };

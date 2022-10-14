@@ -1,6 +1,6 @@
-# Turborepo starter
+# NoA Ignite Template monorepo
 
-This is an official Yarn v1 starter turborepo.
+This monorepo is meant as a template for creating new projects when working with Sanity, Next.js and React components. The repo is meant as a "guide". You _can_ clone the repo and adjust it to your needs, but it's probably better to start your own monorepo and pick individual parts from this repo.
 
 ## What's inside?
 
@@ -13,21 +13,26 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. I
 - `/packages/common`: ...
 - `/packages/ui`: ...
 
+### Common files found in all apps and packages
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+* `.prettierrc.js` - Defines the code formatting
+* 
 
-### Build
+### Build everything
 
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
-yarn run build
+yarn build
 ```
+
+## Working with the apps and packages
+
+It's recommended to open the apps and packages in separate editor windows. For example if you are going to work on the next site found in `/apps/next-website`, you should open this folder in a separate editor window. This will make debugging possible and it's probably easier to keep track of files.
 
 ## Useful Links
 
-Learn more about the power of Turborepo:
+Learn more about Turborepo:
 
 - [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
 - [Caching](https://turborepo.org/docs/core-concepts/caching)
@@ -35,3 +40,7 @@ Learn more about the power of Turborepo:
 - [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
 - [Configuration Options](https://turborepo.org/docs/reference/configuration)
 - [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+
+## Contributing
+
+...

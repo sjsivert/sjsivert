@@ -8,8 +8,8 @@ import { allArticlesGroq, articleGroq, allArticlesForCollectionGroq } from "./gr
  * @returns
  */
 export async function getAllArticles(): Promise<Array<Article>> {
-    const articles = await getSanityClient().fetch<Array<Article>>(allArticlesGroq);
-    return articles;
+	const articles = await getSanityClient().fetch<Array<Article>>(allArticlesGroq);
+	return articles;
 }
 
 /**
@@ -18,8 +18,8 @@ export async function getAllArticles(): Promise<Array<Article>> {
  * @returns
  */
 export async function getAllArticlesForCollection(collection: string): Promise<Array<Article>> {
-    const articles = await getSanityClient().fetch<Array<Article>>(allArticlesForCollectionGroq, { collection });
-    return articles;
+	const articles = await getSanityClient().fetch<Array<Article>>(allArticlesForCollectionGroq, { collection });
+	return articles;
 }
 
 /**
@@ -29,6 +29,6 @@ export async function getAllArticlesForCollection(collection: string): Promise<A
  * @returns
  */
 export async function getArticlesBySlug(preview: boolean, collection: string, slug: string): Promise<Array<Article>> {
-    const articles = await getSanityClient(preview).fetch<Array<Article>>(articleGroq, { slug, collection });
-    return articles;
+	const articles = await getSanityClient(preview).fetch<Array<Article>>(articleGroq, { slug, collection });
+	return articles;
 }

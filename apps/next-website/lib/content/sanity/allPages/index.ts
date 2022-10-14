@@ -9,11 +9,11 @@ import { MainMenu } from "@/lib/types/sanity/allPages/mainMenu";
  * @returns
  */
 export async function getMainMenuAndFooterData(): Promise<MainMenuAndFooter> {
-    const query = `{
+	const query = `{
 		"footer": *[_type == "siteFooter" && !(_id in path("drafts.**"))][0],
 		"mainMenu": *[_type == "mainMenu" && !(_id in path("drafts.**"))][0]
 	}`;
-    const { mainMenu, footer } = await getSanityClient().fetch<{ footer: Footer; mainMenu: MainMenu }>(query);
+	const { mainMenu, footer } = await getSanityClient().fetch<{ footer: Footer; mainMenu: MainMenu }>(query);
 
-    return { mainMenu, footer };
+	return { mainMenu, footer };
 }

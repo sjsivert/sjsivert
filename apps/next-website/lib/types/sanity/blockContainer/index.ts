@@ -5,6 +5,6 @@ import type { TypedObject } from "@portabletext/types";
  * Sanity Portable text
  */
 export interface BlockContainer {
-    _type: "blockContainer";
-    body: Array<TypedObject> | TypedObject;
+	_type: "blockContainer";
+	body: Array<TypedObject> | TypedObject;
 }

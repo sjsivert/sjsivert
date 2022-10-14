@@ -7,8 +7,8 @@ import { sanityConfig } from "./config";
  * should not use a cdn
  */
 const previewClient = createClient({
-    ...sanityConfig,
-    useCdn: false,
+	...sanityConfig,
+	useCdn: false,
 });
 
 /**
@@ -20,5 +20,5 @@ const sanityClient = createClient(sanityConfig);
  * Returns the correct Sanity client based on the preview param
  */
 export function getSanityClient(preview = false) {
-    return preview ? previewClient : sanityClient;
+	return preview ? previewClient : sanityClient;
 }

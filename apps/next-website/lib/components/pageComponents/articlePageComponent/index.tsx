@@ -4,14 +4,14 @@ import { portableTextArticleComponents } from "@/lib/components/portableText";
 import { Article as ArticlePageType } from "@/lib/types/sanity/article";
 
 interface Props {
-    articlePageDocument: ArticlePageType;
+	articlePageDocument: ArticlePageType;
 }
 
 export default function ArticleComponent({ articlePageDocument }: Props): JSX.Element {
-    return (
-        <div>
-            <h1>Article page {articlePageDocument.title}</h1>
-            <PortableText value={articlePageDocument.blocks.body} components={portableTextArticleComponents} />
-        </div>
-    );
+	return (
+		<div>
+			<h1>Article page {articlePageDocument.title}</h1>
+			<PortableText value={articlePageDocument.blocks.body} components={portableTextArticleComponents} />
+		</div>
+	);
 }

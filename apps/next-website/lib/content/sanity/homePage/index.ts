@@ -9,6 +9,6 @@ import { homePageGroq } from "./groq";
  * @returns
  */
 export async function getHomePageDocuments(preview: boolean): Promise<Array<LandingPageBase>> {
-    const data = await getSanityClient(preview).fetch<Array<LandingPageBase>>(homePageGroq);
-    return data;
+	const data = await getSanityClient(preview).fetch<Array<LandingPageBase>>(homePageGroq);
+	return data;
 }

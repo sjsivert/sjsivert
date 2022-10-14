@@ -10,6 +10,6 @@ import { landingPageGroq } from "./groq";
  * @returns
  */
 export async function getLandingPageDocumentsBySlug(preview: boolean, slug: string): Promise<Array<LandingPage>> {
-    const data = await getSanityClient(preview).fetch<Array<LandingPage>>(landingPageGroq, { slug });
-    return data;
+	const data = await getSanityClient(preview).fetch<Array<LandingPage>>(landingPageGroq, { slug });
+	return data;
 }

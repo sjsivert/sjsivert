@@ -1,14 +1,14 @@
 {
-    "css.customData": ["./.vscode/css.css-data.json"],
-    "cSpell.words": [
-        "changefreq",
-        "Deutsch",
-        "Diaceutics",
-        "dxrx",
-        "Italiano",
-        "lastmod",
-        "nextjs",
-        "portabletext",
-        "unoptimized"
-    ]
+	"css.customData": ["./.vscode/css.css-data.json"],
+	"cSpell.words": [
+		"changefreq",
+		"Deutsch",
+		"Diaceutics",
+		"dxrx",
+		"Italiano",
+		"lastmod",
+		"nextjs",
+		"portabletext",
+		"unoptimized"
+	]
 }

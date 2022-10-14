@@ -9,46 +9,46 @@ import { MainMenuAndFooter } from "@/lib/types/sanity/allPages";
 import { Article as ArticlePageType } from "@/lib/types/sanity/article";
 
 interface Props {
-    mainMenuAndFooterData: MainMenuAndFooter;
-    allArticlePageDocuments: Array<ArticlePageType>;
+	mainMenuAndFooterData: MainMenuAndFooter;
+	allArticlePageDocuments: Array<ArticlePageType>;
 }
 
 export default function ArticleListPage({ mainMenuAndFooterData, allArticlePageDocuments }: Props) {
-    const router = useRouter();
+	const router = useRouter();
 
-    return (
-        <Layout mainMenuAndFooterData={mainMenuAndFooterData}>
-            <h1>Article list</h1>
-            <ul>
-                {allArticlePageDocuments.map((article) => {
-                    return (
-                        <li key={article._id}>
-                            <Link href={`${router.asPath}/${article.collection.path.current}/${article.slug}`}>
-                                <a>{article.title}</a>
-                            </Link>
-                        </li>
-                    );
-                })}
-            </ul>
-        </Layout>
-    );
+	return (
+		<Layout mainMenuAndFooterData={mainMenuAndFooterData}>
+			<h1>Article list</h1>
+			<ul>
+				{allArticlePageDocuments.map((article) => {
+					return (
+						<li key={article._id}>
+							<Link href={`${router.asPath}/${article.collection.path.current}/${article.slug}`}>
+								<a>{article.title}</a>
+							</Link>
+						</li>
+					);
+				})}
+			</ul>
+		</Layout>
+	);
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    // Get header and footer data
-    const [mainMenuAndFooterData, allArticlePageDocuments] = await Promise.all([
-        getMainMenuAndFooterData(),
-        getAllArticles(),
-    ]);
+	// Get header and footer data
+	const [mainMenuAndFooterData, allArticlePageDocuments] = await Promise.all([
+		getMainMenuAndFooterData(),
+		getAllArticles(),
+	]);
 
-    if (!Array.isArray(allArticlePageDocuments) || allArticlePageDocuments.length < 1) {
-        return { notFound: true };
-    }
+	if (!Array.isArray(allArticlePageDocuments) || allArticlePageDocuments.length < 1) {
+		return { notFound: true };
+	}
 
-    const props: Props = {
-        mainMenuAndFooterData,
-        allArticlePageDocuments,
-    };
+	const props: Props = {
+		mainMenuAndFooterData,
+		allArticlePageDocuments,
+	};
 
-    return { props, revalidate: 60 * 5 };
+	return { props, revalidate: 60 * 5 };
 };

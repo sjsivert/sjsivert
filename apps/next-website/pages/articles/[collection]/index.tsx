@@ -9,58 +9,58 @@ import { MainMenuAndFooter } from "@/lib/types/sanity/allPages";
 import { Article as ArticlePageType } from "@/lib/types/sanity/article";
 
 interface Props {
-    mainMenuAndFooterData: MainMenuAndFooter;
-    allArticlePageDocuments: Array<ArticlePageType>;
+	mainMenuAndFooterData: MainMenuAndFooter;
+	allArticlePageDocuments: Array<ArticlePageType>;
 }
 
 type Params = { collection: string };
 
 export default function ArticleCollectionListPage({ mainMenuAndFooterData, allArticlePageDocuments }: Props) {
-    const router = useRouter();
+	const router = useRouter();
 
-    return (
-        <Layout mainMenuAndFooterData={mainMenuAndFooterData}>
-            <h1>Article list for collection {allArticlePageDocuments[0].collection.name}</h1>
-            <ul>
-                {allArticlePageDocuments.map((article) => {
-                    return (
-                        <li key={article._id}>
-                            <Link href={`${article.slug}`}>
-                                <a>{article.title}</a>
-                            </Link>
-                        </li>
-                    );
-                })}
-            </ul>
-        </Layout>
-    );
+	return (
+		<Layout mainMenuAndFooterData={mainMenuAndFooterData}>
+			<h1>Article list for collection {allArticlePageDocuments[0].collection.name}</h1>
+			<ul>
+				{allArticlePageDocuments.map((article) => {
+					return (
+						<li key={article._id}>
+							<Link href={`${article.slug}`}>
+								<a>{article.title}</a>
+							</Link>
+						</li>
+					);
+				})}
+			</ul>
+		</Layout>
+	);
 }
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-    return {
-        paths: [],
-        fallback: "blocking",
-    };
+	return {
+		paths: [],
+		fallback: "blocking",
+	};
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    // Get the collection path
-    const collection = (params as Params).collection;
+	// Get the collection path
+	const collection = (params as Params).collection;
 
-    // Get header and footer data
-    const [mainMenuAndFooterData, allArticlePageDocuments] = await Promise.all([
-        getMainMenuAndFooterData(),
-        getAllArticlesForCollection(collection),
-    ]);
+	// Get header and footer data
+	const [mainMenuAndFooterData, allArticlePageDocuments] = await Promise.all([
+		getMainMenuAndFooterData(),
+		getAllArticlesForCollection(collection),
+	]);
 
-    if (!Array.isArray(allArticlePageDocuments) || allArticlePageDocuments.length < 1) {
-        return { notFound: true };
-    }
+	if (!Array.isArray(allArticlePageDocuments) || allArticlePageDocuments.length < 1) {
+		return { notFound: true };
+	}
 
-    const props: Props = {
-        mainMenuAndFooterData,
-        allArticlePageDocuments,
-    };
+	const props: Props = {
+		mainMenuAndFooterData,
+		allArticlePageDocuments,
+	};
 
-    return { props, revalidate: 60 * 5 };
+	return { props, revalidate: 60 * 5 };
 };
