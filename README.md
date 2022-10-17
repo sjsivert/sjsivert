@@ -12,15 +12,15 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. I
 
 ### Apps and Packages
 
-- `/apps/next-website`: A Next.js website
-- `/apps/sanity-studio`: Sanity studio
-- `/packages/common`: ...
-- `/packages/ui`: ...
+-   `/apps/next-website`: A Next.js website
+-   `/apps/sanity-studio`: Sanity studio
+-   `/packages/common`: ...
+-   `/packages/ui`: ...
 
 ### Common files found in all apps and packages
 
-* `.prettierrc.js` - Defines the code formatting
-* 
+-   `.prettierrc.js` - Defines the code formatting
+-
 
 ### Build everything
 
@@ -38,12 +38,12 @@ It's recommended to open the apps and packages in separate editor windows. For e
 
 Learn more about Turborepo:
 
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+-   [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
+-   [Caching](https://turborepo.org/docs/core-concepts/caching)
+-   [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
+-   [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
+-   [Configuration Options](https://turborepo.org/docs/reference/configuration)
+-   [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
 
 ## Contributing
 
