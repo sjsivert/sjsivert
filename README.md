@@ -14,8 +14,9 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. I
 
 -   `/apps/next-website`: A Next.js website
 -   `/apps/sanity-studio`: Sanity studio
--   `/packages/common`: ...
--   `/packages/ui`: ...
+-   `/apps/storybook`: A Storybook setup for testing ui components
+-   `/packages/common`: Utils that are used in multiple apps
+-   `/packages/ui`: React UI components
 
 ### Common files found in all apps and packages
 
@@ -45,6 +46,10 @@ Learn more about Turborepo:
 -   [Configuration Options](https://turborepo.org/docs/reference/configuration)
 -   [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
 
-## Contributing
+## Contributing and reporting bugs
 
-...
+If you find a bug; Fork the repo, fix the bug, and create a pull request. Please describe what has been fixed and why. You can assign the pull-request to any of the admins.
+
+If you have a suggestion for a new feature or you feel that something should be changed, open an issue so the item can be discussed.
+
+Always be polite and describe pull-requests and issues so other people can understand them.
