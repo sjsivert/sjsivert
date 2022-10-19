@@ -3,10 +3,6 @@
 	"project": {
 		"name": "noa-template-studio"
 	},
-	"api": {
-		"projectId": "0tejmv10",
-		"dataset": "development"
-	},
 	"plugins": [
 		"@sanity/base",
 		"@sanity/components",
