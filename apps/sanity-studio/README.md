@@ -24,4 +24,4 @@ This repository is intended as inspiration or a starter template to get rolling 
 
 ## Documentation
 
-All documentation is located in the [«docs»](/docs) folder.
+All documentation is located in the [«docs»](docs/) folder.
