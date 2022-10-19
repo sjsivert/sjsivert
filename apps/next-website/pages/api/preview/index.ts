@@ -6,12 +6,16 @@ interface Params {
 	sanityPreviewSecret: string;
 }
 
-export function previewHandler(req: NextApiRequest, res: NextApiResponse, params: Params) {
-	// ...
+/**
+ * Handles all preview path when Sanity Studio asks for a preview
+ */
+function previewHandler(req: NextApiRequest, res: NextApiResponse, params: Params) {
+	// Validate that this request is coming from a known Sanity Studio instance
 	if (req.query.secret !== params.sanityPreviewSecret) {
 		return res.status(401).json({ message: "Invalid token" });
 	}
 
+	// Extract query params
 	const docType = req.query._type as string;
 	const docId = req.query._id as string;
 	const docSlug = (req.query.slug as string) || undefined;
@@ -21,17 +25,20 @@ export function previewHandler(req: NextApiRequest, res: NextApiResponse, params
 		return res.status(401).json({ message: "You must pass a type and an id" });
 	}
 
+	// This flips preview mote to true for all Next pages
 	res.setPreviewData({});
 
-	// redirect to the correct page
+	// redirect to the correct page to preview
 	const path = resolvePath(docType, docId, docCollection, docSlug);
-
 	return res.redirect(307, path);
 }
 
-// Try to get the path using the type first
-// if that returns null
-// the get the path by id
+/**
+ * Resolves the preview path based on document properties
+ * Try to get the path using the type first
+ * if that returns null
+ * the get the path by id
+ */
 function resolvePath(type: string, id: string, collection?: string, slug?: string): string {
 	const path = getTypePath(type, id, collection, slug);
 	return path ? path : getPathForId(id);
@@ -56,7 +63,7 @@ function buildTypePath(basePath: string, id?: string, slug?: string): string {
 	return basePath;
 }
 
-// Handles cases where the slug has been generated in some fancy way
+// Handles cases where the slug has been generated in a custom way
 function getTypePath(type: string, id: string, collection?: string, slug?: string): string | null {
 	if (type === "pageArticle") {
 		return buildTypePath("/", id, `articles/${collection}/${slug}`);

@@ -7,6 +7,12 @@ interface Props {
 	articlePageDocument: ArticlePageType;
 }
 
+/**
+ * This component is responsible for rendering an article page
+ * Most of the work here is performed by the <PortableText> Sanity module.
+ * The «portableTextArticleComponents» serializer rules are passed in to <PortableText>
+ * to inform the module how it should render each component or mark
+ */
 export default function ArticleComponent({ articlePageDocument }: Props): JSX.Element {
 	return (
 		<div>

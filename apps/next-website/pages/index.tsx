@@ -17,6 +17,10 @@ interface Props {
 	preview: boolean;
 }
 
+/**
+ * The home page
+ * This page is simply a landing page without a slug
+ */
 export default function Home({ mainMenuAndFooterData, homePageDocument, preview }: Props) {
 	const { data: previewData } = usePreviewSubscription(homePageGroq, {
 		initialData: homePageDocument,

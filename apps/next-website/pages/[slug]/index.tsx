@@ -18,12 +18,22 @@ interface Props {
 
 type Params = { slug: string };
 
+/**
+ * Defines the render function for a landing page
+ * This component runs both on the server side and on the client side
+ * so you should avoid using server side code inside of this component.
+ */
 export default function LandingPage({ mainMenuAndFooterData, landingPageDocument, preview }: Props) {
+	// This handles previewing data from Sanity
+	// If preview is enabled, _draft data will be added (if it exists)
+	// else only the initialData is used
 	const { data: previewData } = usePreviewSubscription(landingPageGroq, {
 		initialData: landingPageDocument,
 		enabled: preview,
 	});
 
+	// Since previewData can contain both a published document
+	// and a draft document, we need to filter out the document we don't need
 	const currentPage = filterDataToSingleItem<LandingPageType>(
 		Array.isArray(previewData) ? previewData : [previewData],
 		preview
@@ -36,6 +46,9 @@ export default function LandingPage({ mainMenuAndFooterData, landingPageDocument
 	);
 }
 
+/**
+ * Pre-rendering has not been implemented
+ */
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
 	return {
 		paths: [],

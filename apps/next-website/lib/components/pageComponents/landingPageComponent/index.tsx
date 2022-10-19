@@ -5,6 +5,9 @@ interface Props {
 	landingPageDocument: HomePageType;
 }
 
+/**
+ * This component is responsible for rendering any landing page
+ */
 export default function LandingPageComponent({ landingPageDocument }: Props): JSX.Element {
 	return (
 		<div>

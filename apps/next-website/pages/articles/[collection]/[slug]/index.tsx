@@ -19,7 +19,11 @@ interface Props {
 
 type Params = { slug: string; collection: string };
 
+/**
+ * Article template handler
+ */
 export default function ArticlePage({ mainMenuAndFooterData, articlePageDocument, preview }: Props) {
+	// See «pages/[slug]/index.tsx» for comments on the Sanity preview setup
 	const { data: previewData } = usePreviewSubscription(articleGroq, {
 		initialData: articlePageDocument,
 		enabled: preview,
