@@ -18,4 +18,4 @@ If you are using Visual Studio Code, there are 5 launch scripts provided. Use th
 
 ## Documentation
 
-All the documentation can be found in the [docs](/docs/) folder.
+All the documentation can be found in the [docs](docs/) folder.
