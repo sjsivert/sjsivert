@@ -16,6 +16,7 @@ This repository is intended as inspiration or a starter template to get rolling 
 ## Getting started and notes
 
 -   Clone the repo
+-   Setup up you own Sanity dataset (run `sanity init` or do it manually)
 -   Run `yarn install` (or convert to npm/pnpm..)
 -   Run Studio `yarn start`
 
@@ -24,7 +25,3 @@ This repository is intended as inspiration or a starter template to get rolling 
 ## Documentation
 
 All documentation is located in the [«docs»](/docs) folder.
-
-## Contributing
-
-...

@@ -7,6 +7,9 @@ import YouTubeComp from "@/lib/components/portableText/youtube";
 import { AccessibleImage } from "@/lib/types/sanity/accessibleImage";
 import { YouTube } from "@/lib/types/sanity/youtube";
 
+/**
+ * This is the main serializer for portable text components used in the article template in Sanity
+ */
 export const portableTextArticleComponents: PortableTextComponents = {
 	types: {
 		accessibleImage: (props) => {
