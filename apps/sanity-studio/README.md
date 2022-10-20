@@ -2,6 +2,10 @@
 
 This repository is intended as inspiration or a starter template to get rolling with Sanity Studio.
 
+## Getting started
+
+You need to create a `.env.development` file. You can copy the env vars from the `.env.example`file. The you need to create a project at sanity.io and update the env variables with your Sanity project config. For the `SANITY_STUDIO_PREVIEW_TOKEN` you can use a key generator and create a long string. (This key should also be used in the Next project env vars.)
+
 ## Project overview
 
 -   The project uses Typescript

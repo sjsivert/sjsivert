@@ -1,3 +1,7 @@
+## Getting started
+
+To run the project locally, first create a file called `.env.local`. You can copy the env vars from `.env.example`. All the values for the Sanity variables you'll find when setting up your Sanity project (see the Sanity project readme). The `SANITY_PREVIEW_SECRET` can be any string as long it is the same one as the `SANITY_STUDIO_PREVIEW_TOKEN` you created in the Sanity `.env.development` file.
+
 ## Debugging
 
 If you are using Visual Studio Code, there are 5 launch scripts provided. Use them from the debugger menu.
