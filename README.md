@@ -1,12 +1,14 @@
 # NoA Ignite Template monorepo
 
-This monorepo is meant as a template for creating new projects when working with Sanity, Next.js and React components. The repo is meant as a "guide" for how to structure your apps and packages. You _can_ clone the repo and adjust it to your needs, but it's probably better to start your own monorepo and pick individual parts from this repo.
+This monorepo (using turborepo) is meant as a template for creating new projects when working with Sanity, Next.js and React components. The repo is meant as a "guide" for how to structure your apps and packages. You _can_ clone the repo and adjust it to your needs, but it's probably better to start your own monorepo and pick individual parts from this repo.
 
 > PS: All the apps, packages and documentation assumes that you have at least some knowledge of how to work with both Sanity, React and Next projects. This is not a "getting started" ...thing 🤓
 
 ## Documentation
 
 Documentation for the different apps and packages can be found inside that app or package.
+
+For how to use Turborepo, please refer to the [Turborepo documentation](https://turborepo.org/docs).
 
 ## What's inside?
 
@@ -22,11 +24,11 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. I
 
 ### Common files found in all apps and packages
 
--   `.prettierrc.js` - Defines the code formatting
+-   `.prettierrc.js` - Defines the code formatting (it does not use inheritance yet)
 
 ### Build everything
 
-To build all apps and packages, run the following command from the root of the project:
+To build all apps and packages, run the following command from the root of the project (this is mostly used when deploying):
 
 ```
 yarn build
