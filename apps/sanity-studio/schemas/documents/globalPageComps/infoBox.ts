@@ -1,4 +1,4 @@
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 
 export default {

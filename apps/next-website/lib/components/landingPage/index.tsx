@@ -1,12 +1,12 @@
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 
 import GlobalCompAlert from "@/lib/components/globalComponents/alert";
 import GlobalCompInfoBox from "@/lib/components/globalComponents/infoBox";
-import { GlobalAlert } from "@/lib/types/sanity/globalComponents/alert";
-import { GlobalInfoBox } from "@/lib/types/sanity/globalComponents/infoBox";
-import { LandingPageBase as LandingPageBaseType } from "@/lib/types/sanity/landingPage";
-import { PageItemCallToActionBar } from "@/lib/types/sanity/landingPage/pageItemCallToActionBar";
-import { PageItemHero } from "@/lib/types/sanity/landingPage/pageItemHero";
+import { GlobalAlert } from "common/src/types/sanity/globalComponents/alert";
+import { GlobalInfoBox } from "common/src/types/sanity/globalComponents/infoBox";
+import { LandingPageBase as LandingPageBaseType } from "common/src/types/sanity/landingPage";
+import { PageItemCallToActionBar } from "common/src/types/sanity/landingPage/pageItemCallToActionBar";
+import { PageItemHero } from "common/src/types/sanity/landingPage/pageItemHero";
 
 import LandingPageCallToActionBar from "./callToActionBar";
 import LandingPageHero from "./hero";

@@ -1,7 +1,7 @@
 import { PortableText } from "@portabletext/react";
 import Link from "next/link";
 
-import { CallToActionBlockComp } from "@/lib/types/sanity/callToAction";
+import { CallToActionBlockComp } from "common/src/types/sanity/callToAction";
 
 import { callToActionSerializer } from "./internalSerializer";
 

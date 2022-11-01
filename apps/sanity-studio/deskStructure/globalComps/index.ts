@@ -1,5 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 import { IconType } from "react-icons";
 import { AiOutlineFolder } from "react-icons/ai";
 import { AiOutlineInfoCircle } from "react-icons/ai";

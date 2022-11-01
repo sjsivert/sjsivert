@@ -1,4 +1,4 @@
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 import { CgWebsite } from "react-icons/cg";
 import { CgComponents } from "react-icons/cg";
 

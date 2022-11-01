@@ -1,10 +1,10 @@
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 import Link from "next/link";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsNewspaper } from "react-icons/bs";
 import { RiArticleLine } from "react-icons/ri";
 
-import { Footer } from "@/lib/types/sanity/allPages/footer";
+import { Footer } from "common/src/types/sanity/allPages/footer";
 
 interface Props {
 	footerData: Footer;

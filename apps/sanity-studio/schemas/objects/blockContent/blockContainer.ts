@@ -1,4 +1,4 @@
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 import { BiLink, BiLinkExternal, BiNews } from "react-icons/bi";
 
 import { accessibleImageValidator } from "../accessibleImage";

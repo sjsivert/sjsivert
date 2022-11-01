@@ -1,10 +1,10 @@
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 import Link from "next/link";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsNewspaper } from "react-icons/bs";
 import { RiArticleLine } from "react-icons/ri";
 
-import { MainMenu } from "@/lib/types/sanity/allPages/mainMenu";
+import { MainMenu, MainMenuActionItem } from "common/src/types/sanity/allPages/mainMenu";
 
 interface Props {
 	mainMenuData: MainMenu;
@@ -14,9 +14,10 @@ interface Props {
 export default function MainMenuComp({ mainMenuData, previewActive }: Props): JSX.Element {
 	const items = mainMenuData.menuItems.map((item) => {
 		if (item._type === SchemaType.MAIN_MENU_ACTION_ITEM_OBJECT) {
+			const typedItem = item as MainMenuActionItem;
 			let icon = <AiOutlineHome />;
 
-			if (item.icon === "document") {
+			if (typedItem.icon === "document") {
 				icon = <RiArticleLine />;
 			} else if (item.icon === "newspaper") {
 				icon = <BsNewspaper />;

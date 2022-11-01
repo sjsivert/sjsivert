@@ -3,13 +3,13 @@ import type { GetStaticProps, GetStaticPaths } from "next";
 
 import Layout from "@/lib/components/Layout";
 import ArticleComponent from "@/lib/components/pageComponents/articlePageComponent";
-import { getMainMenuAndFooterData } from "@/lib/content/sanity/allPages";
-import { getArticlesBySlug } from "@/lib/content/sanity/articles";
-import { articleGroq } from "@/lib/content/sanity/articles/groq";
+import { getMainMenuAndFooterData } from "common/src/content/sanity/allPages";
+import { getArticlesBySlug } from "common/src/content/sanity/articles";
+import { articleGroq } from "common/src/content/sanity/articles/groq";
 import { usePreviewSubscription } from "@/lib/hooks/useSanityPreviewSubscription";
-import { MainMenuAndFooter } from "@/lib/types/sanity/allPages";
-import { Article as ArticlePageType } from "@/lib/types/sanity/article";
-import { filterDataToSingleItem } from "@/lib/utils/sanity";
+import { MainMenuAndFooter } from "common/src/types/sanity/allPages";
+import { Article as ArticlePageType } from "common/src/types/sanity/article";
+import { filterDataToSingleItem } from "common/src/utils/sanity";
 
 interface Props {
 	mainMenuAndFooterData: MainMenuAndFooter;

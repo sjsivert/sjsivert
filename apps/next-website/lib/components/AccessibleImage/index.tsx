@@ -1,8 +1,8 @@
 import { useNextSanityImage } from "next-sanity-image";
 import Image, { ImageProps } from "next/image";
 
-import { getSanityClient } from "@/lib/clients/sanityClient";
-import { AccessibleImage as AccessibleImageType } from "@/lib/types/sanity/accessibleImage";
+import { getSanityClient } from "common/src/clients/sanityClient";
+import { AccessibleImage as AccessibleImageType } from "common/src/types/sanity/accessibleImage";
 
 interface Props extends Omit<ImageProps, "src"> {
 	image: AccessibleImageType;

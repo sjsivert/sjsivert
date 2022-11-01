@@ -1,5 +1,9 @@
 {
   "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": [
+    "$SANITY_STUDIO_PREVIEW_TOKEN",
+    "$SANITY_STUDIO_NEXT_SITE_URL"
+  ],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],

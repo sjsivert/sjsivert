@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { PageItemCallToActionBar } from "@/lib/types/sanity/landingPage/pageItemCallToActionBar";
+import { PageItemCallToActionBar } from "common/src/types/sanity/landingPage/pageItemCallToActionBar";
 
 interface Props {
 	data: PageItemCallToActionBar;

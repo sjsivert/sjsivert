@@ -23,7 +23,7 @@
 	},
 	"homepage": "https://github.com/NoA-Ignite-Setups/sanity-studio#readme",
 	"dependencies": {
-		"@sanity/base": "^2.33.3",
+		"@sanity/base": "^2.35.0",
 		"@sanity/components": "^2.14.0",
 		"@sanity/core": "^2.33.3",
 		"@sanity/default-layout": "^2.33.3",

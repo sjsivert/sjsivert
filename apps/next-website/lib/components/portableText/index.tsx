@@ -4,8 +4,8 @@ import Link from "next/link";
 import AccessibleImageComp from "@/lib/components/AccessibleImage";
 import CallToActionComp from "@/lib/components/portableText/callToActionComp";
 import YouTubeComp from "@/lib/components/portableText/youtube";
-import { AccessibleImage } from "@/lib/types/sanity/accessibleImage";
-import { YouTube } from "@/lib/types/sanity/youtube";
+import { AccessibleImage } from "common/src/types/sanity/accessibleImage";
+import { YouTube } from "common/src/types/sanity/youtube";
 
 /**
  * This is the main serializer for portable text components used in the article template in Sanity

@@ -1,1 +1,1 @@
-export * from "./sanity/SchemaType";
+export * as SchemaType from "./src/sanity/SchemaType";

@@ -1,4 +1,4 @@
-import { GlobalAlert } from "@/lib/types/sanity/globalComponents/alert";
+import { GlobalAlert } from "common/src/types/sanity/globalComponents/alert";
 
 import { Alert } from "ui";
 

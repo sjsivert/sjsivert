@@ -1,4 +1,4 @@
-import { GlobalInfoBox } from "@/lib/types/sanity/globalComponents/infoBox";
+import { GlobalInfoBox } from "common/src/types/sanity/globalComponents/infoBox";
 
 interface Props {
 	infoBoxProps: GlobalInfoBox;

@@ -1,4 +1,4 @@
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 
 export default {
 	name: SchemaType.ARTICLE_COLLECTION_URL_PATH,

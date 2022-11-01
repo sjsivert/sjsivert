@@ -1,5 +1,5 @@
 import LandingPageSerializer from "@/lib/components/landingPage";
-import { LandingPageBase as HomePageType } from "@/lib/types/sanity/landingPage";
+import { LandingPageBase as HomePageType } from "common/src/types/sanity/landingPage";
 
 interface Props {
 	landingPageDocument: HomePageType;

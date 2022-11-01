@@ -1,5 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 import { BsFillMenuButtonWideFill } from "react-icons/bs";
 
 export const headerStructure = S.listItem()

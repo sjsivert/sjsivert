@@ -1,4 +1,4 @@
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 import { RiArticleLine } from "react-icons/ri";
 
 import { accessibleImageValidator } from "../../objects/accessibleImage";

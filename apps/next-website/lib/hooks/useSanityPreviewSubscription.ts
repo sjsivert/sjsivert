@@ -1,5 +1,5 @@
 import { createPreviewSubscriptionHook } from "next-sanity";
 
-import { sanityConfig } from "@/lib/clients/config";
+import { sanityConfig } from "common/src/clients/config";
 
 export const usePreviewSubscription = createPreviewSubscriptionHook(sanityConfig);

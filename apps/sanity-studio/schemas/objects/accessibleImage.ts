@@ -1,4 +1,4 @@
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 import { BiImage } from "react-icons/bi";
 
 interface AccessibleImage {

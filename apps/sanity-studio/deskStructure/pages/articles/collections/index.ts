@@ -1,5 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 import { AiFillFolder, AiFillTag, AiOutlineBuild } from "react-icons/ai";
 
 const articleCollectionsUrlPathTitle = "Collections";

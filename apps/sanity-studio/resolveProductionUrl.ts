@@ -1,5 +1,5 @@
 /* eslint-disable no-process-env */
-import SchemaType from "common/sanity/SchemaType";
+import SchemaType from "common/src/sanity/SchemaType";
 import sanityClient from "part:@sanity/base/client";
 
 // Setup client

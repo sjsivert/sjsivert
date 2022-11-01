@@ -3,10 +3,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import Layout from "@/lib/components/Layout";
-import { getMainMenuAndFooterData } from "@/lib/content/sanity/allPages";
-import { getAllArticles } from "@/lib/content/sanity/articles";
-import { MainMenuAndFooter } from "@/lib/types/sanity/allPages";
-import { Article as ArticlePageType } from "@/lib/types/sanity/article";
+import { getMainMenuAndFooterData } from "common/src/content/sanity/allPages";
+import { getAllArticles } from "common/src/content/sanity/articles";
+import { MainMenuAndFooter } from "common/src/types/sanity/allPages";
+import { Article as ArticlePageType } from "common/src/types/sanity/article";
 
 interface Props {
 	mainMenuAndFooterData: MainMenuAndFooter;
