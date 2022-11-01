@@ -11,6 +11,7 @@ import { YouTube } from "@/lib/types/sanity/youtube";
  * This is the main serializer for portable text components used in the article template in Sanity
  */
 export const portableTextArticleComponents: PortableTextComponents = {
+	// Handles custom types/components
 	types: {
 		accessibleImage: (props) => {
 			const value = props.value as AccessibleImage;
@@ -29,6 +30,21 @@ export const portableTextArticleComponents: PortableTextComponents = {
 			return <CallToActionComp fields={props.value} />;
 		},
 	},
+
+	// Handles lists (<ul>, <ol>)
+	// PS: Does not add any styling, only here for demoing
+	list: {
+		bullet: ({ children }) => <ul>{children}</ul>,
+		number: ({ children }) => <ol>{children}</ol>,
+	},
+
+	// handles list items (<li>)
+	// PS: Does not add any styling, only here for demoing
+	listItem: {
+		bullet: ({ children }) => <li>{children}</li>,
+	},
+
+	// handles text marks such as links
 	marks: {
 		link: ({ value, children }) => {
 			return (
