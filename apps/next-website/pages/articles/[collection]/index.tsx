@@ -7,6 +7,7 @@ import { getMainMenuAndFooterData } from "common/src/content/sanity/allPages";
 import { getAllArticlesForCollection } from "common/src/content/sanity/articles";
 import { MainMenuAndFooter } from "common/src/types/sanity/allPages";
 import { Article as ArticlePageType } from "common/src/types/sanity/article";
+import { sanityConfig } from "@/lib/config/envVariables";
 
 interface Props {
 	mainMenuAndFooterData: MainMenuAndFooter;
@@ -49,8 +50,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 	// Get header and footer data
 	const [mainMenuAndFooterData, allArticlePageDocuments] = await Promise.all([
-		getMainMenuAndFooterData(),
-		getAllArticlesForCollection(collection),
+		getMainMenuAndFooterData(sanityConfig),
+		getAllArticlesForCollection(sanityConfig, collection),
 	]);
 
 	if (!Array.isArray(allArticlePageDocuments) || allArticlePageDocuments.length < 1) {

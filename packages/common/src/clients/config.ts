@@ -1,10 +1,23 @@
 /**
  * This is the default config for Sanity
  */
-export const sanityConfig = {
-	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID as string,
-	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET as string,
-	token: process.env.SANITY_SECRET_TOKEN as string,
-	apiVersion: "2021-03-25",
-	useCdn: true,
-};
+export interface SanityConfig {
+	projectId: string;
+	dataset: string;
+	token?: string;
+	useCdn?: boolean;
+	apiVersion?: string;
+}
+
+/**
+ * Takes some params and returns the Sanity client config
+ */
+export function getSanityConfig(config: SanityConfig): SanityConfig {
+	return {
+		projectId: config.projectId,
+		dataset: config.dataset,
+		token: config.token,
+		apiVersion: config.apiVersion || "2021-03-25",
+		useCdn: config.useCdn || true,
+	};
+}

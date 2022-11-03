@@ -3,6 +3,8 @@ function logUndefinedEnv(missingVariable: string) {
 	return "";
 }
 
+import { SanityConfig } from "common/src/clients/config";
+
 export const serverSideEnvironmentVariables = {
 	// Sanity
 	sanityApiToken: process.env.SANITY_SECRET_TOKEN ?? logUndefinedEnv("SANITY_SECRET_TOKEN"),
@@ -11,5 +13,12 @@ export const serverSideEnvironmentVariables = {
 
 export const clientSideEnvironmentVariables = {
 	// Sanity
-	sanityProjectId: process.env.SANITY_PROJECT_ID ?? logUndefinedEnv("NEXT_PUBLIC_SANITY_PROJECT_ID"),
+	sanityProjectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? logUndefinedEnv("NEXT_PUBLIC_SANITY_PROJECT_ID"),
+	sanityDataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? logUndefinedEnv("NEXT_PUBLIC_SANITY_DATASET"),
+};
+
+export const sanityConfig: SanityConfig = {
+	projectId: clientSideEnvironmentVariables.sanityProjectId,
+	dataset: clientSideEnvironmentVariables.sanityDataset,
+	token: serverSideEnvironmentVariables.sanityApiToken,
 };

@@ -1,5 +1,6 @@
 import { getSanityClient } from "@/clients/sanityClient";
 import { Article } from "@/types/sanity/article";
+import type { SanityConfig } from "@/clients/config";
 
 import { allArticlesGroq, articleGroq, allArticlesForCollectionGroq } from "./groq";
 
@@ -7,8 +8,8 @@ import { allArticlesGroq, articleGroq, allArticlesForCollectionGroq } from "./gr
  * Returns all articles (no drafts) for listing
  * @returns
  */
-export async function getAllArticles(): Promise<Array<Article>> {
-	const articles = await getSanityClient().fetch<Array<Article>>(allArticlesGroq);
+export async function getAllArticles(config: SanityConfig): Promise<Array<Article>> {
+	const articles = await getSanityClient(config).fetch<Array<Article>>(allArticlesGroq);
 	return articles;
 }
 
@@ -17,8 +18,8 @@ export async function getAllArticles(): Promise<Array<Article>> {
  * @param collection
  * @returns
  */
-export async function getAllArticlesForCollection(collection: string): Promise<Array<Article>> {
-	const articles = await getSanityClient().fetch<Array<Article>>(allArticlesForCollectionGroq, {
+export async function getAllArticlesForCollection(config: SanityConfig, collection: string): Promise<Array<Article>> {
+	const articles = await getSanityClient(config).fetch<Array<Article>>(allArticlesForCollectionGroq, {
 		collection,
 	});
 	return articles;
@@ -30,7 +31,12 @@ export async function getAllArticlesForCollection(collection: string): Promise<A
  * @param slug
  * @returns
  */
-export async function getArticlesBySlug(preview: boolean, collection: string, slug: string): Promise<Array<Article>> {
-	const articles = await getSanityClient(preview).fetch<Array<Article>>(articleGroq, { slug, collection });
+export async function getArticlesBySlug(
+	config: SanityConfig,
+	preview: boolean,
+	collection: string,
+	slug: string
+): Promise<Array<Article>> {
+	const articles = await getSanityClient(config, preview).fetch<Array<Article>>(articleGroq, { slug, collection });
 	return articles;
 }

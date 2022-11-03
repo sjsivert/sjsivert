@@ -1,6 +1,6 @@
 import { useNextSanityImage } from "next-sanity-image";
 import Image, { ImageProps } from "next/image";
-
+import { sanityConfig } from "@/lib/config/envVariables";
 import { getSanityClient } from "common/src/clients/sanityClient";
 import { AccessibleImage as AccessibleImageType } from "common/src/types/sanity/accessibleImage";
 
@@ -16,7 +16,7 @@ interface Props extends Omit<ImageProps, "src"> {
  * Use this component to display an image from Sanity as a Next image
  */
 export default function AccessibleImage({ image, alt, className, sizes, layout, objectFit }: Props): JSX.Element {
-	const imageProps = useNextSanityImage(getSanityClient(), image);
+	const imageProps = useNextSanityImage(getSanityClient(sanityConfig), image);
 	const defaultSize = layout === "fill" || layout === "responsive" ? "750px" : undefined;
 
 	return (

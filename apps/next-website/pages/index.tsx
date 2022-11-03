@@ -10,6 +10,7 @@ import { usePreviewSubscription } from "@/lib/hooks/useSanityPreviewSubscription
 import { MainMenuAndFooter } from "common/src/types/sanity/allPages";
 import { LandingPageBase } from "common/src/types/sanity/landingPage";
 import { filterDataToSingleItem } from "common/src/utils/sanity";
+import { sanityConfig } from "@/lib/config/envVariables";
 
 interface Props {
 	mainMenuAndFooterData: MainMenuAndFooter;
@@ -43,8 +44,8 @@ export const getStaticProps: GetStaticProps = async ({ preview }) => {
 	const previewEnabled: boolean = preview || false;
 	// Get header and footer data
 	const [mainMenuAndFooterData, homePageDocuments] = await Promise.all([
-		getMainMenuAndFooterData(),
-		getHomePageDocuments(previewEnabled),
+		getMainMenuAndFooterData(sanityConfig),
+		getHomePageDocuments(sanityConfig, previewEnabled),
 	]);
 
 	// Filter out based on preview
