@@ -1,8 +1,10 @@
 # NoA Ignite Template monorepo
 
-This monorepo (using turborepo) is meant as a template for creating new projects when working with Sanity, Next.js and React components. The repo is meant as a "guide" for how to structure your apps and packages. You _can_ clone the repo and adjust it to your needs, but it's probably better to start your own monorepo and pick individual parts from this repo.
+This monorepo (using turborepo) is meant as a template for creating new projects when working with Sanity, Next.js (or SvelteKit) and React/Svelte components. The repo is meant as a "guide" for how to structure your apps and packages. You _can_ clone the repo and adjust it to your needs, but it's probably better to start your own monorepo and pick individual parts from this repo.
 
-> PS: All the apps, packages and documentation assumes that you have at least some knowledge of how to work with both Sanity, React and Next projects. This is not a "getting started" ...thing 🤓
+> Disclaimer: The SvelteKit app is for educational purposes. It's existence is in no way an indication NoA Ignite will officially use SveltKit in active or future projects...like ever...
+
+> PS: All the apps, packages and documentation assumes that you have at least some knowledge of how to work with both Sanity, React, SvelteKit or Next projects. This is not a "getting started" ...thing 🤓
 
 ## Documentation
 
@@ -19,6 +21,7 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. I
 -   `/apps/next-website`: A Next.js website
 -   `/apps/sanity-studio`: Sanity studio
 -   `/apps/storybook`: A Storybook setup for testing ui components
+-   `/apps/web-sveltekit`: A SvelteKit website
 -   `/packages/common`: Utils that are used in multiple apps
 -   `/packages/ui`: React UI components
 
@@ -28,11 +31,7 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. I
 
 ### Build everything
 
-To build all apps and packages, run the following command from the root of the project (this is mostly used when deploying):
-
-```
-yarn build
-```
+To build all apps and packages, run the `yarn build` from the root of the project. Since this repo doesn't actually build the packages for distribution you'll never need to use this command. Use the build command for the app instead, it's faster.
 
 ## Working with the apps and packages
 
