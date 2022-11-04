@@ -9,5 +9,11 @@ export const handle: Handle = async ({ event, resolve }) => {
 	event.locals.preview = event.cookies.get("preview") ? true : false;
 
 	const response = await resolve(event);
+
+	if (event.locals.preview) {
+		// We don't want caching when preview is active
+		response.headers.set("cache-control", "no-cache");
+	}
+
 	return response;
 };
