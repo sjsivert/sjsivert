@@ -27,3 +27,23 @@ If you are using Visual Studio Code, there are 3 launch scripts provided. Use th
     -   `app.css` - The base CSS file.
     -   `app.d.ts` - Definition type file for the root app, see https://kit.svelte.dev/docs/types#app
 -   `svelte.config.js` - This is your main config file, see the file itself for comments
+
+## How does Sanity preview work in a SvelteKit app
+
+This SvelteKit app does not pre-generate static files. Every request will request data from the server. This means that we can handle the preview entirely on the server side.
+
+There are 3 important parts to handling previews from Sanity.
+
+### The /api/preview endpoint
+
+This is where all requests from Sanity is directed. This endpoint will do all the work with authenticating the request and generating the correct page to use for the preview.
+
+If a preview can be generated successfully, the endpoint sets a secure cookie to indicate that preview is active.
+
+### The «src/hooks.server.ts» hook/middleware
+
+This handler is run for all requests. If a preview cookie is found, the hook will set the «locals.preview» param to true. This can then be read as a param by any server route, for any page.
+
+### The data fetching method in common
+
+All the data fetching methods (where preview can be enabled) in common takes a preview param. If preview is true, the method will return drafts as well as published documents. You can then use the «filterDataToSingleItem» to get either a draft or a published document based on the value of the preview param

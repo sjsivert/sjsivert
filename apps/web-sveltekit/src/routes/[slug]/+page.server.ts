@@ -4,8 +4,8 @@ import { error } from "@sveltejs/kit";
 import { getLandingPageDocumentsBySlug } from "common/src/content/sanity/landingPages";
 import { filterDataToSingleItem } from "common/src/utils/sanity/";
 
-export const load: PageServerLoad = async ({ params }) => {
-	const preview = false;
+export const load: PageServerLoad = async ({ params, locals }) => {
+	const preview = locals.preview;
 
 	const pages = await getLandingPageDocumentsBySlug(getSanityConfig(), preview, params.slug);
 	const page = filterDataToSingleItem(pages, preview);

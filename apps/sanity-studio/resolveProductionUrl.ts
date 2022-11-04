@@ -7,7 +7,8 @@ const client = sanityClient.withConfig({ apiVersion: "2021-06-07" });
 
 const previewSecret = process.env.SANITY_STUDIO_PREVIEW_TOKEN;
 const remoteWebsiteUrl = process.env.SANITY_STUDIO_NEXT_SITE_URL;
-const localUrl = `http://localhost:3000`;
+// const localUrl = `http://localhost:3000`; // Next site
+const localUrl = "http://localhost:5173"; // SvelteKit site
 
 function sanitizeId(id: string): string {
 	return id.replace("drafts.", "");
