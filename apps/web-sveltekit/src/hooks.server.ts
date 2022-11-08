@@ -12,7 +12,9 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 	if (event.locals.preview) {
 		// We don't want caching when preview is active
-		response.headers.set("cache-control", "no-cache");
+		response.headers.set("cache-control", "no-cache, no-store, must-revalidate");
+		response.headers.set("Pragma", "no-cache");
+		response.headers.set("Expires", "0");
 	}
 
 	return response;
