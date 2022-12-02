@@ -1,7 +1,4 @@
-import Link from "next/link";
-
 import { PageItemHero } from "common/src/types/sanity/landingPage/pageItemHero";
-
 import { LinkButton } from "ui";
 
 interface Props {

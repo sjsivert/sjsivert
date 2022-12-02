@@ -1,12 +1,12 @@
-import { useNextSanityImage } from "next-sanity-image";
-import Image, { ImageProps } from "next/image";
 import { sanityConfig } from "@/lib/config/envVariables";
 import { getSanityClient } from "common/src/clients/sanityClient";
 import { AccessibleImage as AccessibleImageType } from "common/src/types/sanity/accessibleImage";
+import { useNextSanityImage } from "next-sanity-image";
+import Image, { ImageProps } from "next/image";
 
 interface Props extends Omit<ImageProps, "src"> {
 	image: AccessibleImageType;
-	alt?: string;
+	alt: string;
 	sizes?: string;
 	layout?: "fixed" | "fill" | "intrinsic" | "responsive";
 	objectFit?: "fill" | "contain" | "cover" | "none" | "scale-down";
@@ -19,14 +19,5 @@ export default function AccessibleImage({ image, alt, className, sizes, layout, 
 	const imageProps = useNextSanityImage(getSanityClient(sanityConfig), image);
 	const defaultSize = layout === "fill" || layout === "responsive" ? "750px" : undefined;
 
-	return (
-		<Image
-			{...imageProps}
-			alt={alt || image.alt || ""}
-			layout={layout || "fill"}
-			className={className}
-			sizes={sizes || defaultSize}
-			objectFit={objectFit || "cover"}
-		/>
-	);
+	return <Image {...imageProps} alt={alt || image.alt || ""} className={className} sizes={sizes || defaultSize} />;
 }

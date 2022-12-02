@@ -1,6 +1,5 @@
-import { PortableText } from "@portabletext/react";
-
 import { portableTextArticleComponents } from "@/lib/components/portableText";
+import { PortableText } from "@portabletext/react";
 import { Article as ArticlePageType } from "common/src/types/sanity/article";
 
 interface Props {

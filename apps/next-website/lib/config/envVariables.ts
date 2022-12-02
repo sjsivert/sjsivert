@@ -1,9 +1,9 @@
+import { SanityConfig } from "common/src/clients/config";
+
 function logUndefinedEnv(missingVariable: string) {
 	console.error(`Environment variable ${missingVariable} is not set!`);
 	return "";
 }
-
-import { SanityConfig } from "common/src/clients/config";
 
 export const serverSideEnvironmentVariables = {
 	// Sanity

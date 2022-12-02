@@ -1,15 +1,14 @@
-import type { GetStaticProps, GetStaticPaths } from "next";
-
 import Layout from "@/lib/components/Layout";
 import LandingPageComponent from "@/lib/components/pageComponents/landingPageComponent";
+import { sanityConfig } from "@/lib/config/envVariables";
+import { usePreviewSubscription } from "@/lib/hooks/useSanityPreviewSubscription";
 import { getMainMenuAndFooterData } from "common/src/content/sanity/allPages";
 import { getLandingPageDocumentsBySlug } from "common/src/content/sanity/landingPages";
 import { landingPageGroq } from "common/src/content/sanity/landingPages/groq";
-import { usePreviewSubscription } from "@/lib/hooks/useSanityPreviewSubscription";
 import { MainMenuAndFooter } from "common/src/types/sanity/allPages";
 import { LandingPage as LandingPageType } from "common/src/types/sanity/landingPage";
 import { filterDataToSingleItem } from "common/src/utils/sanity";
-import { sanityConfig } from "@/lib/config/envVariables";
+import type { GetStaticPaths, GetStaticProps } from "next";
 
 interface Props {
 	mainMenuAndFooterData: MainMenuAndFooter;

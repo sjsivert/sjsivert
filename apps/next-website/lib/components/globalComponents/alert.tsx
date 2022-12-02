@@ -1,5 +1,4 @@
 import { GlobalAlert } from "common/src/types/sanity/globalComponents/alert";
-
 import { Alert } from "ui";
 
 interface Props {

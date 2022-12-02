@@ -1,6 +1,5 @@
-import Link from "next/link";
-
 import { PageItemCallToActionBar } from "common/src/types/sanity/landingPage/pageItemCallToActionBar";
+import Link from "next/link";
 
 interface Props {
 	data: PageItemCallToActionBar;
@@ -15,7 +14,7 @@ export default function LandingPageCallToActionBar({ data }: Props) {
 			<div>
 				<p>{bodyText}</p>
 				<Link href={data.callToActionUrl} passHref>
-					<a>{callToActionLabel}</a>
+					{callToActionLabel}
 				</Link>
 			</div>
 		</div>

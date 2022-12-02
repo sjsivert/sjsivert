@@ -1,13 +1,12 @@
-import type { GetStaticProps } from "next";
-import Link from "next/link";
-import { useRouter } from "next/router";
-
 import Layout from "@/lib/components/Layout";
+import { sanityConfig } from "@/lib/config/envVariables";
 import { getMainMenuAndFooterData } from "common/src/content/sanity/allPages";
 import { getAllArticles } from "common/src/content/sanity/articles";
 import { MainMenuAndFooter } from "common/src/types/sanity/allPages";
 import { Article as ArticlePageType } from "common/src/types/sanity/article";
-import { sanityConfig } from "@/lib/config/envVariables";
+import type { GetStaticProps } from "next";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface Props {
 	mainMenuAndFooterData: MainMenuAndFooter;
@@ -25,7 +24,7 @@ export default function ArticleListPage({ mainMenuAndFooterData, allArticlePageD
 					return (
 						<li key={article._id}>
 							<Link href={`${router.asPath}/${article.collection.path.current}/${article.slug}`}>
-								<a>{article.title}</a>
+								{article.title}
 							</Link>
 						</li>
 					);

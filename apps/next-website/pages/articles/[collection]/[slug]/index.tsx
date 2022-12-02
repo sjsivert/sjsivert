@@ -1,16 +1,15 @@
 // an article
-import type { GetStaticProps, GetStaticPaths } from "next";
-
 import Layout from "@/lib/components/Layout";
 import ArticleComponent from "@/lib/components/pageComponents/articlePageComponent";
+import { sanityConfig } from "@/lib/config/envVariables";
+import { usePreviewSubscription } from "@/lib/hooks/useSanityPreviewSubscription";
 import { getMainMenuAndFooterData } from "common/src/content/sanity/allPages";
 import { getArticlesBySlug } from "common/src/content/sanity/articles";
 import { articleGroq } from "common/src/content/sanity/articles/groq";
-import { usePreviewSubscription } from "@/lib/hooks/useSanityPreviewSubscription";
 import { MainMenuAndFooter } from "common/src/types/sanity/allPages";
 import { Article as ArticlePageType } from "common/src/types/sanity/article";
 import { filterDataToSingleItem } from "common/src/utils/sanity";
-import { sanityConfig } from "@/lib/config/envVariables";
+import type { GetStaticPaths, GetStaticProps } from "next";
 
 interface Props {
 	mainMenuAndFooterData: MainMenuAndFooter;

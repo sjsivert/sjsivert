@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
-import Link from "next/link";
 import cn from "classnames";
+import Link from "next/link";
+import { ReactNode } from "react";
 
 interface Props {
 	/** Specify component children */
@@ -18,8 +18,8 @@ const LinkButton = ({ children, className, href }: Props) => {
 	);
 
 	return (
-		<Link href={href}>
-			<a className={componentClass}>{children}</a>
+		<Link className={componentClass} href={href}>
+			{children}
 		</Link>
 	);
 };

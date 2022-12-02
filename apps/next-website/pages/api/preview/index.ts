@@ -1,6 +1,5 @@
-import { NextApiRequest, NextApiResponse } from "next";
-
 import { serverSideEnvironmentVariables } from "@/lib/config/envVariables";
+import { NextApiRequest, NextApiResponse } from "next";
 
 interface Params {
 	sanityPreviewSecret: string;

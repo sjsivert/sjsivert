@@ -1,8 +1,7 @@
-import { ReactNode } from "react";
-
 import FooterComp from "@/lib/components/footer";
 import MainMenuComp from "@/lib/components/mainMenu";
 import { MainMenuAndFooter } from "common/src/types/sanity/allPages";
+import { ReactNode } from "react";
 
 interface Props {
 	mainMenuAndFooterData: MainMenuAndFooter;

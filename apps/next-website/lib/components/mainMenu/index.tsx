@@ -1,10 +1,9 @@
 import SchemaType from "common/src/sanity/SchemaType";
+import { MainMenu, MainMenuActionItem } from "common/src/types/sanity/allPages/mainMenu";
 import Link from "next/link";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsNewspaper } from "react-icons/bs";
 import { RiArticleLine } from "react-icons/ri";
-
-import { MainMenu, MainMenuActionItem } from "common/src/types/sanity/allPages/mainMenu";
 
 interface Props {
 	mainMenuData: MainMenu;
@@ -26,8 +25,8 @@ export default function MainMenuComp({ mainMenuData, previewActive }: Props): JS
 			return (
 				<li key={item._key} className="flex gap-1">
 					<div className="flex items-center">{icon}</div>
-					<Link href={item.url}>
-						<a className="text-white no-underline">{item.label}</a>
+					<Link className="text-white no-underline" href={item.url}>
+						{item.label}
 					</Link>
 				</li>
 			);

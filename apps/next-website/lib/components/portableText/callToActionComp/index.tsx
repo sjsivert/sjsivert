@@ -1,9 +1,7 @@
-import { PortableText } from "@portabletext/react";
-import Link from "next/link";
-
-import { CallToActionBlockComp } from "common/src/types/sanity/callToAction";
-
 import { callToActionSerializer } from "./internalSerializer";
+import { PortableText } from "@portabletext/react";
+import { CallToActionBlockComp } from "common/src/types/sanity/callToAction";
+import Link from "next/link";
 
 interface Props {
 	fields: CallToActionBlockComp;
@@ -20,8 +18,8 @@ export default function CallToActionComp({ fields }: Props): JSX.Element {
 				<PortableText value={fields.bodyBlock} components={callToActionSerializer} />
 			</div>
 			<div className="my-4 bg-slate-500 px-4 py-2 text-center">
-				<Link href={fields.callToActionButton.url}>
-					<a className="text-white">{fields.callToActionButton.label}</a>
+				<Link className="text-white" href={fields.callToActionButton.url}>
+					{fields.callToActionButton.label}
 				</Link>
 			</div>
 		</div>
