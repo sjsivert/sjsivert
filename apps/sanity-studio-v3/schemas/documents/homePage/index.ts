@@ -1,4 +1,5 @@
 import SchemaType from "common/src/sanity/SchemaType";
+import { CgComponents } from "react-icons/cg";
 import { ArrayRule, Rule, StringRule, TextRule, defineField, defineType } from "sanity";
 
 export default defineType({
@@ -29,6 +30,12 @@ export default defineType({
 			of: [
 				{ type: SchemaType.LANDING_PAGE_ITEM_HERO },
 				{ type: SchemaType.LANDING_PAGE_ITEM_CALL_TO_ACTION_BAR },
+				{
+					type: "reference",
+					title: "Global component",
+					icon: CgComponents,
+					to: [{ type: SchemaType.GLOBAL_COMP_INFO_BOX }, { type: SchemaType.GLOBAL_COMP_ALERT }],
+				},
 			],
 			validation: (Rule: ArrayRule<Rule>) =>
 				Rule.required().min(1).error("Min 1 component must be added to the page"),
