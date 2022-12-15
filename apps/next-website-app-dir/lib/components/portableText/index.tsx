@@ -16,7 +16,7 @@ export const portableTextArticleComponents: PortableTextComponents = {
 			const value = props.value as AccessibleImage;
 			return (
 				<figure className="my-4">
-					<AccessibleImageComp image={value} alt={value.alt || ""} layout="responsive" objectFit="contain" />
+					<AccessibleImageComp image={value} alt={value.alt || ""} />
 					<figcaption className="mt-4 text-center text-sm">{value.caption || ""}</figcaption>
 				</figure>
 			);

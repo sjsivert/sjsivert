@@ -1,23 +1,47 @@
 import { sanityConfig } from "@/lib/config/envVariables";
-import { getSanityClient } from "common/src/clients/sanityClient";
+import { getCroppedDimensions } from "@/lib/utils/sanityImages";
+import imageUrlBuilder from "@sanity/image-url";
 import { AccessibleImage as AccessibleImageType } from "common/src/types/sanity/accessibleImage";
-import { useNextSanityImage } from "next-sanity-image";
-import Image, { ImageProps } from "next/image";
+import Image from "next/image";
 
-interface Props extends Omit<ImageProps, "src"> {
+interface Props {
 	image: AccessibleImageType;
 	alt: string;
-	sizes?: string;
-	layout?: "fixed" | "fill" | "intrinsic" | "responsive";
-	objectFit?: "fill" | "contain" | "cover" | "none" | "scale-down";
+	width?: number;
+	height?: number;
+	className?: string;
 }
 
 /**
  * Use this component to display an image from Sanity as a Next image
  */
-export default function AccessibleImage({ image, alt, className, sizes, layout, objectFit }: Props): JSX.Element {
-	const imageProps = useNextSanityImage(getSanityClient(sanityConfig), image);
-	const defaultSize = layout === "fill" || layout === "responsive" ? "750px" : undefined;
+export default function AccessibleImage({ image, alt, className, width, height }: Props): JSX.Element {
+	const defaultWidth = 400;
 
-	return <Image {...imageProps} alt={alt || image.alt || ""} className={className} sizes={sizes || defaultSize} />;
+	const builder = imageUrlBuilder(sanityConfig);
+	let imgUrl = "";
+
+	if (width && height) {
+		imgUrl = builder.image(image).width(width).height(height).url();
+	} else if (width) {
+		imgUrl = builder.image(image).width(width).url();
+	} else if (height) {
+		imgUrl = builder.image(image).height(height).url();
+	} else {
+		imgUrl = builder.image(image).url();
+	}
+
+	// Get the new dimensions of the image after scaling and cropping
+	const dimensions = getCroppedDimensions(imgUrl, width || defaultWidth, image.crop);
+
+	return (
+		<Image
+			src={imgUrl}
+			alt={alt || image.alt || ""}
+			className={className}
+			width={dimensions.width}
+			height={dimensions.height}
+			unoptimized={true}
+		/>
+	);
 }

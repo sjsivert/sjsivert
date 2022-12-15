@@ -11,8 +11,8 @@ interface PreviewDocument {
 // Env vars
 const previewSecret = import.meta.env.SANITY_STUDIO_PREVIEW_TOKEN || "";
 const remoteWebsiteUrl = import.meta.env.SANITY_STUDIO_NEXT_SITE_URL || "";
-// const localUrl = `http://localhost:3000`; // Next site
-const localUrl = "http://localhost:5173"; // SvelteKit site
+const localUrl = `http://localhost:3000`; // Next site
+//const localUrl = "http://localhost:5173"; // SvelteKit site
 
 function sanitizeId(id: string): string {
 	return id.replace("drafts.", "");

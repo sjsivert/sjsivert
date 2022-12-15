@@ -19,7 +19,7 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. I
 ### Apps and Packages
 
 -   `/apps/next-website`: A Next.js website
--   `/apps/next-website-app-dir`: A Next.js site using the /app dir (`under construction`)
+-   `/apps/next-website-app-dir`: A Next.js site using the /app dir
 -   `/apps/sanity-studio_legacy`: (`deprecated`) Sanity studio v2
 -   `/apps/sanity-studio-v3`: Sanity studio
 -   `/apps/storybook`: A Storybook setup for testing ui components
