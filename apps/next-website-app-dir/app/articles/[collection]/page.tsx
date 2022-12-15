@@ -11,7 +11,7 @@ interface Params {
 	collection: string;
 }
 
-export default async function ArticleListPage({ params }: { params: Params }) {
+export default async function ArticleCollectionListPage({ params }: { params: Params }) {
 	const allArticlePageDocuments = await getData(params.collection);
 
 	return (
