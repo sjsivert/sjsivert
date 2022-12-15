@@ -3,19 +3,17 @@ import FooterComp from "@/lib/components/footer";
 import MainMenuComp from "@/lib/components/mainMenu";
 import { sanityConfig } from "@/lib/config/envVariables";
 import { getMainMenuAndFooterData } from "common/src/content/sanity/allPages";
+import { previewData } from "next/headers";
+
+export const revalidate = 3600; // every hour
 
 async function fetchData() {
 	const mainMenuAndFooterData = await getMainMenuAndFooterData(sanityConfig);
 	return mainMenuAndFooterData;
 }
-export const revalidate = 60;
-export default async function RootLayout({
-	children,
-	preview,
-}: {
-	children: React.ReactNode;
-	preview?: boolean;
-}) {
+
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+	const preview = previewData() ? true : false;
 	const mainMenuAndFooterData = await fetchData();
 
 	return (

@@ -11,10 +11,12 @@ export default function LandingPageHero({ data }: Props) {
 	const callToActionLabel = data.callToActionLabel;
 
 	return (
-		<div className="bg-blue-500 px-4 py-2 text-center">
+		<div className=" border-2 border-solid px-4 py-4 text-center">
 			<h3>{title}</h3>
 			<p>{bodyText}</p>
-			<LinkButton href={data.callToActionUrl}>{callToActionLabel}</LinkButton>
+			<LinkButton className="block" href={data.callToActionUrl}>
+				{callToActionLabel}
+			</LinkButton>
 		</div>
 	);
 }

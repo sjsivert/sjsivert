@@ -4,6 +4,7 @@ import Link from "next/link";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsNewspaper } from "react-icons/bs";
 import { RiArticleLine } from "react-icons/ri";
+import Alert from "ui/Alert";
 
 interface Props {
 	mainMenuData: MainMenu;
@@ -23,25 +24,41 @@ export default function MainMenuComp({ mainMenuData, previewActive }: Props): JS
 			}
 
 			return (
-				<li key={item._key} className="flex gap-1">
-					<div className="flex items-center">{icon}</div>
-					<Link className="text-white no-underline" href={item.url}>
+				<div key={item._key} className="flex flex-row gap-1 text-white">
+					<div className="flex items-center mr-2">{icon}</div>
+					<Link className="no-underline" href={item.url}>
 						{item.label}
 					</Link>
-				</li>
+				</div>
 			);
 		} else {
-			return (
-				<li key={item._key} className="text-gray-400">
-					{item.label}
-				</li>
-			);
+			return null;
+			// return (
+			// 	<div
+			// 		key={item._key}
+			// 		className="block mt-4 md:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+			// 	>
+			// 		{item.label}
+			// 	</div>
+			// );
 		}
 	});
 
 	return (
-		<header className="bg-slate-500 px-2">
-			<ul className="flex list-none gap-4 p-4 text-white">{items}</ul>
+		<header className="bg-slate-500">
+			{previewActive && (
+				<Alert alertType="warn">
+					Preview is active{" "}
+					<a href="/api/exit-preview" className="underline text-blue-400">
+						Disable preview mode
+					</a>
+				</Alert>
+			)}
+			<nav className="flex items-center justify-between flex-wrap bg-slate-500 p-6">
+				<div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+					<div className="flex flex-col gap-4 md:flex-row">{items}</div>
+				</div>
+			</nav>
 		</header>
 	);
 }
