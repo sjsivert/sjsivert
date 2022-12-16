@@ -9,4 +9,7 @@ module.exports = {
 	tabWidth: 4,
 	importOrderSeparation: true,
 	importOrderSortSpecifiers: true,
+	// This must be set for both import sort and tailwind sort to work
+	pluginSearchDirs: false,
+	plugins: ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
 };
