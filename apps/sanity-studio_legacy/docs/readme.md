@@ -19,8 +19,8 @@ The desk structure defines the UI for the studio using the structure builder. Fo
 
 There are two page templates of interest:
 
-* Dynamic articles (`schemas/documents/article`)
-* Landing pages (`schemas/documents/landingPage`)
+-   Dynamic articles (`schemas/documents/article`)
+-   Landing pages (`schemas/documents/landingPage`)
 
 ## Dynamic articles
 
@@ -28,8 +28,8 @@ A dynamic article is a template intended for text heavy content, such as article
 
 Dynamic articles have two parts:
 
-* The collection
-* The article document itself
+-   The collection
+-   The article document itself
 
 A collection allows an editor to create groups of articles, which will also affect the url of the output. This adds extra flexibility for the editor while keeping the structure tidy and easy to implement in the Next project.
 
@@ -39,13 +39,12 @@ The article document itself belongs to a collection and can have any field neede
 
 Landing pages are more "controlled" compared to article templates. This template gives the editor the freedom to add, remove and re-order a set of «landing page components» (see below). However, each component explicitly defines what is allowed, there is no mixing of text and components like for the article template.
 
-
 # Components
 
 There are two main types of components:
 
-* Inline components (used by portable text)
-* Block components (or landing page components)
+-   Inline components (used by portable text)
+-   Block components (or landing page components)
 
 ## Inline and block components
 

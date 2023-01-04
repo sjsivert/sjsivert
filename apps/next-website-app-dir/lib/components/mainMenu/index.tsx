@@ -25,7 +25,7 @@ export default function MainMenuComp({ mainMenuData, previewActive }: Props): JS
 
 			return (
 				<div key={item._key} className="flex flex-row gap-1 text-white">
-					<div className="flex items-center mr-2">{icon}</div>
+					<div className="mr-2 flex items-center">{icon}</div>
 					<Link className="no-underline" href={item.url}>
 						{item.label}
 					</Link>
@@ -48,14 +48,14 @@ export default function MainMenuComp({ mainMenuData, previewActive }: Props): JS
 		<header className="bg-slate-500">
 			{previewActive && (
 				<Alert alertType="warn">
-					Preview is active{" "}
-					<a href="/api/exit-preview" className="underline text-blue-400">
+					Preview is active {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+					<a href="/api/exit-preview" className="text-blue-400 underline">
 						Disable preview mode
 					</a>
 				</Alert>
 			)}
-			<nav className="flex items-center justify-between flex-wrap bg-slate-500 p-6">
-				<div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+			<nav className="flex flex-wrap items-center justify-between bg-slate-500 p-6">
+				<div className="block w-full flex-grow lg:flex lg:w-auto lg:items-center">
 					<div className="flex flex-col gap-4 md:flex-row">{items}</div>
 				</div>
 			</nav>

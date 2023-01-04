@@ -1,11 +1,10 @@
-const withTM = require("next-transpile-modules")(["ui", "common"]);
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
 	reactStrictMode: true,
 	poweredByHeader: false,
+	transpilePackages: ["ui", "common"],
 	webpack: (config) => {
 		// Debugging setup
 		config.output = config.output || {};
@@ -16,4 +15,4 @@ const nextConfig = {
 	},
 };
 
-module.exports = withTM(nextConfig);
+module.exports = nextConfig;

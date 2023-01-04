@@ -1,8 +1,9 @@
-import { getSanityClient } from "@/clients/sanityClient";
-import { Article } from "@/types/sanity/article";
 import type { SanityConfig } from "@/clients/config";
+import { getSanityClient } from "@/clients/sanityClient";
 
-import { allArticlesGroq, articleGroq, allArticlesForCollectionGroq } from "./groq";
+import { Article } from "@/types/sanity/article";
+
+import { allArticlesForCollectionGroq, allArticlesGroq, articleGroq } from "./groq";
 
 /**
  * Returns all articles (no drafts) for listing

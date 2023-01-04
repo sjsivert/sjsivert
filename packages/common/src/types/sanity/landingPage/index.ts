@@ -3,7 +3,6 @@ import SchemaType from "@/sanity/SchemaType";
 import { SanityDocument } from "../common";
 import { GlobalAlert } from "../globalComponents/alert";
 import { GlobalInfoBox } from "../globalComponents/infoBox";
-
 import { PageItemArticleSection } from "./pageItemArticleSection";
 import { PageItemCallToActionBar } from "./pageItemCallToActionBar";
 import { PageItemHero } from "./pageItemHero";

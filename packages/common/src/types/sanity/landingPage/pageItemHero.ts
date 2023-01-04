@@ -1,5 +1,4 @@
 import SchemaType from "../../../sanity/SchemaType";
-
 import { AccessibleImage } from "../accessibleImage";
 import { SanityObject } from "../common";
 

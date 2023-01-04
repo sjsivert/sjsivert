@@ -1,8 +1,9 @@
+import type { SanityConfig } from "@/clients/config";
 import { getSanityClient } from "@/clients/sanityClient";
+
 import { MainMenuAndFooter } from "@/types/sanity/allPages";
 import { Footer } from "@/types/sanity/allPages/footer";
 import { MainMenu } from "@/types/sanity/allPages/mainMenu";
-import type { SanityConfig } from "@/clients/config";
 
 /**
  * Fetches data for the main menu and the footer

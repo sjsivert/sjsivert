@@ -1,6 +1,7 @@
-import { getSanityClient } from "@/clients/sanityClient";
-import { LandingPage } from "@/types/sanity/landingPage";
 import type { SanityConfig } from "@/clients/config";
+import { getSanityClient } from "@/clients/sanityClient";
+
+import { LandingPage } from "@/types/sanity/landingPage";
 
 import { landingPageGroq } from "./groq";
 
