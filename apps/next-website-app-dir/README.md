@@ -18,6 +18,16 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Running Playwright end-to-end tests
+
+More info about Playwright here: https://playwright.dev/
+
+All the tests are located in the `/tests` folder. This is also where the report from the tests will be generated. See the `playwright.config.ts` for changing these paths.
+
+The test will automatically start the local production server (`yarn start`) so you'll need to run a production build before running the tests (`yarn build`).
+
+To run the tests use `yarn test:pw` or use the VSCode plugin.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
