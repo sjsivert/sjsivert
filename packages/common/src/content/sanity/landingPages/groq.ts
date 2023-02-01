@@ -14,3 +14,7 @@ export const landingPageGroq = `*[_type == "pageLandingPage" && slug.current == 
 		},
 	},	
 }`;
+
+export const landingPageForSitemapGroq = `*[_type == "pageLandingPage" && !(_id in path("drafts.**"))] {
+	"slug": slug.current,
+}`;

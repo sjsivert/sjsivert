@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "next build && yarn gen:sitemap",
 		"start": "next start",
 		"lint": "next lint",
 		"ts:check": "tsc --noEmit",
@@ -12,7 +12,8 @@
 		"prettier:check": "prettier --check .",
 		"prettier:fix": "prettier --write .",
 		"clean": "rm -rf .next/cache",
-		"test:pw": "playwright test"
+		"test:pw": "playwright test",
+		"gen:sitemap": "next-sitemap"
 	},
 	"dependencies": {
 		"@portabletext/react": "^2.0.0",
@@ -25,6 +26,7 @@
 		"eslint-config-next": "13.0.6",
 		"get-youtube-id": "^1.0.1",
 		"next": "^13.0.7-canary.5",
+		"next-sitemap": "^3.1.49",
 		"prettier": "^2.8.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
