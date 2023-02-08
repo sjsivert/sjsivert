@@ -1,6 +1,5 @@
 import LandingPageComponent from "@/lib/components/pageComponents/landingPageComponent";
 import { sanityConfig } from "@/lib/config/envVariables";
-import { getSEOTitle } from "@/lib/config/seo";
 import { getLandingPageDocumentsBySlug } from "common/src/content/sanity/landingPages";
 import { filterDataToSingleItem } from "common/src/utils/sanity";
 import { previewData } from "next/headers";
@@ -13,7 +12,7 @@ export async function generateMetadata({ params }: { params: Params }) {
 	const preview = previewData() ? true : false;
 	const page = await getData(preview, params.slug);
 	if (page) {
-		return { title: getSEOTitle(page.title), description: page.description };
+		return { title: page.title, description: page.description };
 	}
 	return null;
 }

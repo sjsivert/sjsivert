@@ -1,5 +1,4 @@
 import { sanityConfig } from "@/lib/config/envVariables";
-import { getSEOTitle } from "@/lib/config/seo";
 import { getAllArticlesForCollection } from "common/src/content/sanity/articles";
 import Link from "next/link";
 
@@ -13,7 +12,7 @@ export async function generateMetadata({ params }: { params: Params }) {
 	// Note: All documents since we are filtering on the collection slug)
 	const collectionObj = allArticlePageDocuments[0].collection;
 	return {
-		title: getSEOTitle(`A list of articles in the «${collectionObj.name}» collection`),
+		title: `A list of articles in the «${collectionObj.name}» collection`,
 		description: `A list of all articles in the «${collectionObj.name}» collection`,
 	};
 }

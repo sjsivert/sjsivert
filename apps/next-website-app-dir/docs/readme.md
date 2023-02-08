@@ -54,6 +54,8 @@ For pages with dynamic paths that doesn't use `generateStaticParams`, you'll nee
 Next 13 has build in support using the `metadata` export (static) or by exporting the `generateMetadata` function.
 This has been implemented for all pages in this project. For more info, see https://beta.nextjs.org/docs/guides/seo
 
+-   The main `app/layout.tsx` file configures the basic metadata, which is then overridden by the individual pages
+
 ## Running Playwright end-to-end tests
 
 More info about Playwright here: https://playwright.dev/

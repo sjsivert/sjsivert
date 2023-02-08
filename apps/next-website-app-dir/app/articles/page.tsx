@@ -1,5 +1,4 @@
 import { sanityConfig } from "@/lib/config/envVariables";
-import { getSEOTitle } from "@/lib/config/seo";
 import { getAllArticles } from "common/src/content/sanity/articles";
 import Link from "next/link";
 
@@ -8,7 +7,7 @@ export const revalidate = 3600; // every hour
 // SEO
 export async function generateMetadata() {
 	return {
-		title: getSEOTitle("All articles"),
+		title: "All articles",
 		description: `A list of all articles`,
 	};
 }

@@ -13,6 +13,19 @@ async function fetchData() {
 	return mainMenuAndFooterData;
 }
 
+// default SEO
+export const metadata = {
+	title: {
+		default: "Home",
+		template: "%s | (TR) Next App dir",
+	},
+	openGraph: {
+		title: "(TR) Next App dir",
+		locale: "en-US",
+		type: "website",
+	},
+};
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 	const preview = previewData() ? true : false;
 	const mainMenuAndFooterData = await fetchData();
