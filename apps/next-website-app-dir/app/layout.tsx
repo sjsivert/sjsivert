@@ -3,6 +3,7 @@ import FooterComp from "@/lib/components/footer";
 import MainMenuComp from "@/lib/components/mainMenu";
 import { sanityConfig } from "@/lib/config/envVariables";
 import { getMainMenuAndFooterData } from "common/src/content/sanity/allPages";
+import { DefaultSeo } from "next-seo";
 import { previewData } from "next/headers";
 
 export const revalidate = 3600; // every hour

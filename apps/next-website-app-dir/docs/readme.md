@@ -39,12 +39,20 @@ For an introduction to portable text, Sanity ha written up an [introduction arti
 
 ## Sitemaps
 
+> PS: The robots.txt is set to not allow indexing since this is a demo repo. You should probably change this.
+> See `next-sitemap.config.js` «policies»
+
 This project uses [next-sitemap](https://www.npmjs.com/package/next-sitemap).
 See the setup file for more info at `next-sitemap.config.js`.
 
 All non-dynamic pages will automatically get added to the sitemap. Also, if you are using `generateStaticParams` for a page with a dynamic path, it will automatically generate the sitemap for that file.
 
 For pages with dynamic paths that doesn't use `generateStaticParams`, you'll need to generate the sitemap manually. An example of this can be seen at the `dynamic-sitemap.xml` path in the /pages folder.
+
+## SEO
+
+Next 13 has build in support using the `metadata` export (static) or by exporting the `generateMetadata` function.
+This has been implemented for all pages in this project. For more info, see https://beta.nextjs.org/docs/guides/seo
 
 ## Running Playwright end-to-end tests
 

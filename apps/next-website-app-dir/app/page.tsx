@@ -1,10 +1,25 @@
 import LandingPageComponent from "@/lib/components/pageComponents/landingPageComponent";
 import { sanityConfig } from "@/lib/config/envVariables";
+import { getSEOTitle } from "@/lib/config/seo";
 import { getHomePageDocuments } from "common/src/content/sanity/homePage/";
 import { filterDataToSingleItem } from "common/src/utils/sanity";
 import { previewData } from "next/headers";
+import { notFound } from "next/navigation";
 
-export const revalidate = 3600; // every hour
+// Caching
+// Revalidate this page every hour
+export const revalidate = 3600;
+
+// SEO
+// This is a "magic" Next function, see https://beta.nextjs.org/docs/guides/seo
+export async function generateMetadata() {
+	const preview = previewData() ? true : false;
+	const page = await getData(preview);
+	if (page) {
+		return { title: getSEOTitle(page.title || "No title"), description: page.description };
+	}
+	return null;
+}
 
 async function getData(preview: boolean) {
 	// Get all pages (published and drafts)
@@ -20,5 +35,10 @@ async function getData(preview: boolean) {
 export default async function HomePage() {
 	const preview = previewData() ? true : false;
 	const page = await getData(preview);
+
+	if (!page) {
+		return notFound();
+	}
+
 	return <LandingPageComponent landingPageDocument={page} />;
 }

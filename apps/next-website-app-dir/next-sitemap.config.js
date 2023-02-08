@@ -17,5 +17,6 @@ module.exports = {
 	exclude: ["/dynamic-sitemap.xml"],
 	robotsTxtOptions: {
 		additionalSitemaps: [`${getBaseUrl()}/dynamic-sitemap.xml`],
+		policies: [{ userAgent: "*", disallow: "*" }],
 	},
 };

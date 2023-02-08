@@ -1,6 +1,22 @@
 import { sanityConfig } from "@/lib/config/envVariables";
+import { getSEOTitle } from "@/lib/config/seo";
 import { getAllArticlesForCollection } from "common/src/content/sanity/articles";
 import Link from "next/link";
+
+// SEO
+export async function generateMetadata({ params }: { params: Params }) {
+	const allArticlePageDocuments = await getData(params.collection);
+	if (allArticlePageDocuments.length < 1) {
+		return null;
+	}
+	// Grab the collection object (all collections are the same for
+	// Note: All documents since we are filtering on the collection slug)
+	const collectionObj = allArticlePageDocuments[0].collection;
+	return {
+		title: getSEOTitle(`A list of articles in the «${collectionObj.name}» collection`),
+		description: `A list of all articles in the «${collectionObj.name}» collection`,
+	};
+}
 
 async function getData(collection: string) {
 	const allArticles = await getAllArticlesForCollection(sanityConfig, collection);
@@ -13,6 +29,10 @@ interface Params {
 
 export default async function ArticleCollectionListPage({ params }: { params: Params }) {
 	const allArticlePageDocuments = await getData(params.collection);
+
+	if (allArticlePageDocuments.length < 1) {
+		return <h1>No articles found</h1>;
+	}
 
 	return (
 		<>
