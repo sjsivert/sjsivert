@@ -6,7 +6,6 @@ import { MainMenuAndFooter } from "common/src/types/sanity/allPages";
 import { Article as ArticlePageType } from "common/src/types/sanity/article";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 interface Props {
 	mainMenuAndFooterData: MainMenuAndFooter;
@@ -16,8 +15,6 @@ interface Props {
 type Params = { collection: string };
 
 export default function ArticleCollectionListPage({ mainMenuAndFooterData, allArticlePageDocuments }: Props) {
-	const router = useRouter();
-
 	return (
 		<Layout mainMenuAndFooterData={mainMenuAndFooterData}>
 			<h1>Article list for collection {allArticlePageDocuments[0].collection.name}</h1>

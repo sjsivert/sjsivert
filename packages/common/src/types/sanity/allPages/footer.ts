@@ -1,4 +1,6 @@
-import { SanityDocument, SanityObject } from "@/types/sanity/common";
+import { SanityDocument } from "@sanity/types";
+
+import { SanityObject } from "@/types/sanity/common";
 
 export interface FooterLink extends SanityObject {
 	footerLinkTitle: string;

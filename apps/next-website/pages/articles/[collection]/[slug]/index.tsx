@@ -2,10 +2,8 @@
 import Layout from "@/lib/components/Layout";
 import ArticleComponent from "@/lib/components/pageComponents/articlePageComponent";
 import { sanityConfig } from "@/lib/config/envVariables";
-import { usePreviewSubscription } from "@/lib/hooks/useSanityPreviewSubscription";
 import { getMainMenuAndFooterData } from "common/src/content/sanity/allPages";
 import { getArticlesBySlug } from "common/src/content/sanity/articles";
-import { articleGroq } from "common/src/content/sanity/articles/groq";
 import { MainMenuAndFooter } from "common/src/types/sanity/allPages";
 import { Article as ArticlePageType } from "common/src/types/sanity/article";
 import { filterDataToSingleItem } from "common/src/utils/sanity";
@@ -14,7 +12,6 @@ import type { GetStaticPaths, GetStaticProps } from "next";
 interface Props {
 	mainMenuAndFooterData: MainMenuAndFooter;
 	articlePageDocument: ArticlePageType;
-	preview: boolean;
 }
 
 type Params = { slug: string; collection: string };
@@ -22,21 +19,10 @@ type Params = { slug: string; collection: string };
 /**
  * Article template handler
  */
-export default function ArticlePage({ mainMenuAndFooterData, articlePageDocument, preview }: Props) {
-	// See «pages/[slug]/index.tsx» for comments on the Sanity preview setup
-	const { data: previewData } = usePreviewSubscription(articleGroq, {
-		initialData: articlePageDocument,
-		enabled: preview,
-	});
-
-	const currentPage = filterDataToSingleItem<ArticlePageType>(
-		Array.isArray(previewData) ? previewData : [previewData],
-		preview
-	);
-
+export default function ArticlePage({ mainMenuAndFooterData, articlePageDocument }: Props) {
 	return (
 		<Layout mainMenuAndFooterData={mainMenuAndFooterData}>
-			<ArticleComponent articlePageDocument={currentPage!} />
+			<ArticleComponent articlePageDocument={articlePageDocument} />
 		</Layout>
 	);
 }
@@ -71,7 +57,6 @@ export const getStaticProps: GetStaticProps = async ({ preview, params }) => {
 	const props: Props = {
 		mainMenuAndFooterData,
 		articlePageDocument,
-		preview: previewEnabled,
 	};
 
 	return { props, revalidate: 60 * 5 };

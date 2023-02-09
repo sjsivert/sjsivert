@@ -1,6 +1,7 @@
 import SchemaType from "@/sanity/SchemaType";
+import { SanityDocument } from "@sanity/types";
 
-import { SanityDocument, SanityObject } from "../common";
+import { SanityObject } from "../common";
 
 /**
  * A main menu item with an action

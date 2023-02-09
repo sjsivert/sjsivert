@@ -1,6 +1,7 @@
+import { SanityDocument } from "@sanity/types";
+
 import { AccessibleImage } from "@/types/sanity/accessibleImage";
 import { BlockContainer } from "@/types/sanity/blockContainer";
-import { SanityDocument } from "@/types/sanity/common";
 
 export interface ArticleCollection extends SanityDocument {
 	name: string;
