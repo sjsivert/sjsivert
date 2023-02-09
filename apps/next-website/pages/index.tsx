@@ -33,7 +33,7 @@ export default function Home({ mainMenuAndFooterData, homePageDocument, preview 
 
 	return (
 		<Layout mainMenuAndFooterData={mainMenuAndFooterData}>
-			<LandingPageComponent landingPageDocument={currentPage} />
+			<LandingPageComponent landingPageDocument={currentPage!} />
 		</Layout>
 	);
 }

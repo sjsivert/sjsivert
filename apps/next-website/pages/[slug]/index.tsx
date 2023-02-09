@@ -41,7 +41,7 @@ export default function LandingPage({ mainMenuAndFooterData, landingPageDocument
 
 	return (
 		<Layout mainMenuAndFooterData={mainMenuAndFooterData}>
-			<LandingPageComponent landingPageDocument={currentPage} />
+			<LandingPageComponent landingPageDocument={currentPage!} />
 		</Layout>
 	);
 }

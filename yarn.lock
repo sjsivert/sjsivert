@@ -2557,6 +2557,14 @@
     "@sanity/client" "^4.0.1"
     "@types/react" "^18.0.25"
 
+"@sanity/types@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@sanity/types/-/types-3.3.1.tgz#08a9d751205c356cb5103e430b1e2f3d6f88ed2b"
+  integrity sha512-ThbGGtPbiDM0xmD2XZejO07lkYj/5ZFJ8KgFuvNoRAbqPlY52LoZNsxJm1T/IDZcetX+/TwmOLCKxeu9767QJw==
+  dependencies:
+    "@sanity/client" "^4.0.1"
+    "@types/react" "^18.0.25"
+
 "@sanity/ui@^1.0.0":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@sanity/ui/-/ui-1.2.1.tgz#a35d5501e9edf4ea027bdc123426236cb4395e17"

@@ -36,7 +36,7 @@ export default function ArticlePage({ mainMenuAndFooterData, articlePageDocument
 
 	return (
 		<Layout mainMenuAndFooterData={mainMenuAndFooterData}>
-			<ArticleComponent articlePageDocument={currentPage} />
+			<ArticleComponent articlePageDocument={currentPage!} />
 		</Layout>
 	);
 }
