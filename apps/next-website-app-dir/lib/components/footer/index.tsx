@@ -8,7 +8,7 @@ interface Props {
 
 export default function FooterComp({ footerData }: Props): JSX.Element {
 	return (
-		<footer className="footer fixed bottom-0 w-full bg-base-200 p-10 text-base-content">
+		<footer className="footer w-full bg-base-200 p-10 text-base-content">
 			<div>
 				<span className="footer-title">Links</span>
 				{footerData.footerLinks.map((link) => {
