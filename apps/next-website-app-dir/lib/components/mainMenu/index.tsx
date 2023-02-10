@@ -1,9 +1,6 @@
 import SchemaType from "common/src/sanity/SchemaType";
-import { MainMenu, MainMenuActionItem } from "common/src/types/sanity/allPages/mainMenu";
+import type { MainMenu } from "common/src/types/sanity/allPages/mainMenu";
 import Link from "next/link";
-import { AiOutlineHome } from "react-icons/ai";
-import { BsNewspaper } from "react-icons/bs";
-import { RiArticleLine } from "react-icons/ri";
 import Alert from "ui/Alert";
 
 interface Props {
@@ -14,33 +11,46 @@ interface Props {
 export default function MainMenuComp({ mainMenuData, previewActive }: Props): JSX.Element {
 	const items = mainMenuData.menuItems.map((item) => {
 		if (item._type === SchemaType.MAIN_MENU_ACTION_ITEM_OBJECT) {
-			const typedItem = item as MainMenuActionItem;
-			let icon = <AiOutlineHome />;
-
-			if (typedItem.icon === "document") {
-				icon = <RiArticleLine />;
-			} else if (item.icon === "newspaper") {
-				icon = <BsNewspaper />;
-			}
-
 			return (
-				<div key={item._key} className="flex flex-row gap-1 text-white">
-					<div className="mr-2 flex items-center">{icon}</div>
-					<Link className="no-underline" href={item.url}>
-						{item.label}
-					</Link>
-				</div>
+				<li key={item._key}>
+					<Link href={item.url}>{item.label}</Link>
+				</li>
 			);
 		} else {
-			return null;
-			// return (
-			// 	<div
-			// 		key={item._key}
-			// 		className="block mt-4 md:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-			// 	>
-			// 		{item.label}
-			// 	</div>
-			// );
+			return (
+				<li key={item._key} tabIndex={0}>
+					<a>
+						{item.label}
+						<svg
+							className="fill-current"
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+						>
+							<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+						</svg>
+					</a>
+					<ul className="bg-base-200 p-2">
+						{item.subItems.map((subItem) => {
+							if (subItem.url.startsWith("http")) {
+								return (
+									<li key={subItem._key}>
+										<a href={subItem.url} target="_blank" rel="noreferrer">
+											{subItem.label}
+										</a>
+									</li>
+								);
+							}
+							return (
+								<li key={subItem._key}>
+									<Link href={subItem.url}>{subItem.label}</Link>
+								</li>
+							);
+						})}
+					</ul>
+				</li>
+			);
 		}
 	});
 
@@ -54,9 +64,9 @@ export default function MainMenuComp({ mainMenuData, previewActive }: Props): JS
 					</a>
 				</Alert>
 			)}
-			<nav className="flex flex-wrap items-center justify-between bg-slate-500 p-6">
-				<div className="block w-full flex-grow lg:flex lg:w-auto lg:items-center">
-					<div className="flex flex-col gap-4 md:flex-row">{items}</div>
+			<nav className="navbar bg-base-200">
+				<div className="flex-none">
+					<ul className="menu menu-horizontal px-1">{items}</ul>
 				</div>
 			</nav>
 		</header>

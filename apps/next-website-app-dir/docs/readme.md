@@ -1,11 +1,8 @@
 # Documentation for the Next project
 
+> This Next project is using the `/app dir`, which is in beta when this is written (Feb 2023).
+
 This document will explain the main concepts of this Next project. For details you should look at the provided example files and read the inline documentation in the code.
-
-## What has not been implemented (yet)
-
--   SEO
--   Dynamic sitemaps (see [«Other»](#Other) below)
 
 ## Organizing files and folders
 
