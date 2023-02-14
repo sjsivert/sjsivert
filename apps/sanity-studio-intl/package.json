@@ -1,5 +1,5 @@
 {
-  "name": "noa-template-studio",
+  "name": "sanity-studio-intl",
   "private": true,
   "version": "1.0.0",
   "main": "package.json",
@@ -18,11 +18,11 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^3.3.1",
+    "@sanity/language-filter": "^3.0.0",
+    "@sanity/vision": "^3.0.0",
     "common": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
     "react-is": "^18.2.0",
     "react-youtube": "^10.1.0",
     "sanity": "^3.0.0",
@@ -33,7 +33,7 @@
     "@sanity/eslint-config-studio": "^2.0.1",
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "eslint": "^8.6.0",
-    "prettier": "^2.8.0",
+    "prettier": "^2.8.4",
     "typescript": "^4.0.0"
   }
 }

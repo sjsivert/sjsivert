@@ -1,5 +1,6 @@
 import { structure } from "./deskStructure";
 import { schemaTypes } from "./schemas";
+import { visionTool } from "@sanity/vision";
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 
@@ -10,7 +11,7 @@ export default defineConfig({
 	projectId: "0tejmv10",
 	dataset: "development",
 
-	plugins: [deskTool({ structure })],
+	plugins: [deskTool({ structure }), visionTool()],
 
 	schema: {
 		types: schemaTypes,

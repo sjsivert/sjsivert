@@ -15,11 +15,13 @@ enum SchemaType {
 	// Dynamic articles
 	ARTICLE_COLLECTION_URL_PATH = "articleCollectionUrlPath",
 	ARTICLE_CATEGORY = "articleCategory",
+	ARTICLE_ACCESSIBLE_IMAGE = "articleAccessibleImage", // For localized Sanity Studio (sanity-studio-intl)
 
 	// Landing page comps
 	LANDING_PAGE_ITEM_HERO = "landingPageItemHero",
 	LANDING_PAGE_ITEM_CALL_TO_ACTION_BAR = "landingPageItemCallToActionBar",
 	LANDING_PAGE_ITEM_ARTICLE_SECTION = "landingPageItemArticleSection",
+	LANDING_PAGE_ITEM_ACCESSIBLE_IMAGE = "landingPageItemAccessibleImage", // For localized Sanity Studio (sanity-studio-intl)
 
 	// Header/main menu
 	MAIN_MENU = "mainMenu",
@@ -28,10 +30,10 @@ enum SchemaType {
 
 	// Footer
 	SITE_FOOTER = "siteFooter",
+	ACCESSIBLE_IMAGE = "accessibleImage", // For non-localized Sanity Studio (sanity-studio)
 
 	// Objects
 	LINK_OBJECT = "linkObject",
-	ACCESSIBLE_IMAGE = "accessibleImage",
 }
 
 export default SchemaType;
