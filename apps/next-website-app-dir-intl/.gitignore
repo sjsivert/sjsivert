@@ -3,9 +3,6 @@
 # test output
 /playwright-report
 
-# generated sitemaps
-sitemap*.xml
-
 # dependencies
 /node_modules
 /.pnp

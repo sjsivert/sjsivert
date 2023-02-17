@@ -6,6 +6,8 @@ const nextConfig = {
 	transpilePackages: ["ui", "common"],
 	experimental: {
 		appDir: true,
+		//serverComponentsExternalPackages: ["node-fetch", "@portabletext/react"],
+		serverComponentsExternalPackages: ["node-fetch"],
 	},
 };
 
