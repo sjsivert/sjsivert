@@ -7,7 +7,7 @@ import globalCompInfoBox from "./documents/globalPageComps/infoBox";
 import mainMenu from "./documents/header";
 import pageHomePage from "./documents/homePage";
 import pageLandingPage from "./documents/landingPage";
-import blockContentAccessibleImage from "./objects/blockContent/accessibleImage";
+import blockContentAccessibleImage from "./objects/accessibleImage";
 import blockContainer from "./objects/blockContent/blockContainer";
 import blockContentCallToActionContainer from "./objects/blockContent/callToAction";
 import blockContentCallToActionBlock from "./objects/blockContent/callToAction/callToActionBlock";

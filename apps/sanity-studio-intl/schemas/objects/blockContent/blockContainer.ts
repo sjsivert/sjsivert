@@ -1,4 +1,4 @@
-import { accessibleImageValidator } from "../blockContent/accessibleImage";
+import { accessibleImageValidator } from "../accessibleImage";
 import SchemaType from "common/src/sanity/SchemaType";
 import { BiLinkExternal, BiNews } from "react-icons/bi";
 import { defineField, defineType } from "sanity";
@@ -69,7 +69,7 @@ export default defineType({
 					},
 				},
 				defineField({
-					type: SchemaType.ARTICLE_ACCESSIBLE_IMAGE,
+					type: SchemaType.ACCESSIBLE_IMAGE,
 					name: "accessibleImage",
 					title: "Image",
 					validation: accessibleImageValidator,

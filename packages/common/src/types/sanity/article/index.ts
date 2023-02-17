@@ -1,27 +1,48 @@
 import { SanityDocument } from "@sanity/types";
 
-import { AccessibleImage } from "@/types/sanity/accessibleImage";
+import { AccessibleImage, AccessibleImageIntl } from "@/types/sanity/accessibleImage";
 import { BlockContainer } from "@/types/sanity/blockContainer";
 
-export interface ArticleCollection extends SanityDocument {
-	name: string;
+import { Locale } from "../common";
+
+export interface ArticleCollectionBase extends SanityDocument {
 	path: { current: string };
+}
+
+export interface ArticleCollection extends ArticleCollectionBase {
+	name: string;
 	description?: string;
 }
 
-export interface ArticleCategory extends SanityDocument {
-	name: string;
-	slug: { current: string };
+export interface ArticleCollectionSanityData extends ArticleCollectionBase {
+	name: Locale;
+	description?: Locale;
 }
 
-export interface Article extends SanityDocument {
-	articlePreviewImage: AccessibleImage;
+export interface BaseArticle extends SanityDocument {
 	path: string;
 	slug: string;
-	collection: ArticleCollection;
-	category?: ArticleCategory;
+}
+
+export interface Article extends BaseArticle {
 	title: string;
 	description: string;
 	summary: string;
+	articlePreviewImage: AccessibleImage;
+	collection: ArticleCollection;
 	blocks: BlockContainer;
+	category?: { name: string; slug: { current: string } };
+}
+
+/**
+ * Used for projects that use localization
+ */
+export interface ArticleSanityData extends BaseArticle {
+	title: Locale;
+	description: Locale;
+	summary: Locale;
+	collection: ArticleCollectionSanityData;
+	articlePreviewImage: AccessibleImageIntl;
+	blocks: { [key: string]: BlockContainer };
+	category?: { name: Locale; slug: { current: string } };
 }

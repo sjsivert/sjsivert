@@ -6,6 +6,10 @@ This monorepo (using turborepo) is meant as a template for creating new projects
 
 > PS: All the apps, packages and documentation assumes that you have at least some knowledge of how to work with both Sanity, React, SvelteKit or Next projects. This is not a "getting started" ...thing 🤓
 
+## Releases
+
+For all releases, please see the [release log](releases.md)
+
 ## Documentation
 
 Documentation for the different apps and packages can be found inside that app or package.
@@ -18,17 +22,19 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. I
 
 ### Apps and Packages
 
--   `/apps/next-website`: A Next.js website
--   `/apps/next-website-app-dir`: A Next.js site using the /app dir (beta)
--   `/apps/sanity-studio`: Sanity Studio
--   `/apps/storybook`: A Storybook setup for testing ui components
--   `/apps/web-sveltekit`: A SvelteKit website
--   `/packages/common`: Utils that are used in multiple apps
--   `/packages/ui`: React UI components
+- `/apps/next-website`: A Next.js website
+- `/apps/next-website-app-dir`: A Next.js site using the /app dir (beta)
+- `/apps/next-website-app-dir-intl`: A Next.js site using the /app dir (beta) with localization support
+- `/apps/sanity-studio`: Sanity Studio
+- `/apps/sanity-studio-intl`: Sanity Studio with localization support
+- `/apps/storybook`: A Storybook setup for testing ui components
+- `/apps/web-sveltekit`: A SvelteKit website
+- `/packages/common`: Utils that are used in multiple apps
+- `/packages/ui`: React UI components
 
 ### Common files found in all apps and packages
 
--   `.prettierrc.js` - Defines the code formatting (it does not use inheritance yet)
+- `.prettierrc.js` - Defines the code formatting (it does not use inheritance yet)
 
 ### Build everything
 
@@ -42,12 +48,12 @@ To build all apps and packages, run the `yarn build` from the root of the projec
 
 Learn more about Turborepo:
 
--   [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
--   [Caching](https://turborepo.org/docs/core-concepts/caching)
--   [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
--   [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
--   [Configuration Options](https://turborepo.org/docs/reference/configuration)
--   [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
+- [Caching](https://turborepo.org/docs/core-concepts/caching)
+- [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
+- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
+- [Configuration Options](https://turborepo.org/docs/reference/configuration)
+- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
 
 ## Contributing and reporting bugs
 

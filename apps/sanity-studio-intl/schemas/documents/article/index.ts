@@ -53,7 +53,7 @@ export default defineType({
 			to: { type: SchemaType.ARTICLE_CATEGORY },
 		}),
 		defineField({
-			type: SchemaType.LANDING_PAGE_ITEM_ACCESSIBLE_IMAGE,
+			type: SchemaType.ACCESSIBLE_IMAGE_INTL,
 			name: "articlePreviewImage",
 			description: "This is the image used to generate previews for this article",
 			title: "Preview Image",

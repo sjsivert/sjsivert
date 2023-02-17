@@ -39,7 +39,7 @@ export function accessibleImageValidator(Rule: any) {
 export default defineType({
 	type: "image",
 	title: "Image with caption",
-	name: SchemaType.LANDING_PAGE_ITEM_ACCESSIBLE_IMAGE,
+	name: SchemaType.ACCESSIBLE_IMAGE_INTL,
 	options: { hotspot: true },
 	icon: BiImage,
 	fields: [

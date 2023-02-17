@@ -81,7 +81,7 @@ export default defineType({
 				Rule.required().error("Hero Component: Please select a color scheme"),
 		}),
 		defineField({
-			type: SchemaType.LANDING_PAGE_ITEM_ACCESSIBLE_IMAGE,
+			type: SchemaType.ACCESSIBLE_IMAGE_INTL,
 			name: "backgroundImage",
 			title: "Background image",
 			description: "This is the background image for the entire hero component",
@@ -90,7 +90,7 @@ export default defineType({
 		defineField({
 			name: "heroImage",
 			title: "Hero image (Image area)",
-			type: SchemaType.LANDING_PAGE_ITEM_ACCESSIBLE_IMAGE,
+			type: SchemaType.ACCESSIBLE_IMAGE_INTL,
 			description: "This is the main image placed on the left or right based on the selected layout",
 			fieldset: "image-area",
 			validation: accessibleImageValidator,
