@@ -49,7 +49,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 	// Add all landing pages
 	for (const page of allLandingPages) {
 		for (const lang of supportedLanguages) {
-			const url = new URL(`/${lang}/${page.slug}`, getBaseUrl());
+			const url = new URL(`/${lang.id}/${page.slug}`, getBaseUrl());
 			fields.push({
 				loc: url.toString(),
 				lastmod: new Date().toISOString(),
