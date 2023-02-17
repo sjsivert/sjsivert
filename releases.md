@@ -1,3 +1,13 @@
+## 17.02.2023 - Localization
+
+- Introduces a new project `next-website-app-dir-intl`
+- Introduces a new project in the app folder, `sanity-studio-intl`.
+
+This project is a Next.js 13 project using /app dir with full localization support and a full Sanity Studio setup with localization support.
+Also updates types in common and adds a new content folder in common for fetching localized data from Sanity.
+
+PLease read : [docs/localization.md](docs/localization.md) to get a better understanding on how this works.
+
 ## 14.02.2023 - Sanity localization project
 
 - Introduces a new project in the app folder, `sanity-studio-intl`.
