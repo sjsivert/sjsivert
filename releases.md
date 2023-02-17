@@ -1,3 +1,11 @@
+## 17.02.2023 - Sitemap updates and misc
+
+* middleware now ignores `/sitemap.xml` and `/robots.txt`
+* robots.txt and sitemap.xml is implemented using pages routes (will be switched to Routing Handlers when stable)
+* removes the «next-sitemap» package
+* node-fetch gets added to «serverComponentsExternalPackages» (next.config)
+* Locks the next.js version to `13.1.7-canary.10`, since canary 11 and above is causing build problems
+
 ## 17.02.2023 - Localization
 
 - Introduces a new project `next-website-app-dir-intl`
@@ -6,7 +14,7 @@
 This project is a Next.js 13 project using /app dir with full localization support and a full Sanity Studio setup with localization support.
 Also updates types in common and adds a new content folder in common for fetching localized data from Sanity.
 
-PLease read : [docs/localization.md](docs/localization.md) to get a better understanding on how this works.
+Please read : [docs/localization.md](docs/localization.md) to get a better understanding on how this works.
 
 ## 14.02.2023 - Sanity localization project
 
