@@ -5,7 +5,7 @@
 * Removes the next-sitemap package from `next-website-app-dir`
 * Moves «getBaseUrl» to the «common» package
 
-## 20.02.2023 - Package updates an bugfixes
+## 20.02.2023 - Package updates and bugfixes
 
 * Updates packages to latest versions
 * `next-website-app-dir-intl` is now on the latest next@canary
