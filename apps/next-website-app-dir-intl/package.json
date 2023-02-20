@@ -12,8 +12,7 @@
 		"prettier:check": "prettier --check .",
 		"prettier:fix": "prettier --write .",
 		"clean": "rm -rf .next/cache",
-		"test:pw": "playwright test",
-		"gen:sitemap": "next-sitemap"
+		"test:pw": "playwright test"
 	},
 	"dependencies": {
 		"@portabletext/react": "^2.0.0",

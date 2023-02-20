@@ -10926,7 +10926,7 @@ next-seo@^5.5.0:
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-5.15.0.tgz#b1a90508599774982909ea44803323c6fb7b50f4"
   integrity sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==
 
-next-sitemap@^3.1.23, next-sitemap@^3.1.49:
+next-sitemap@^3.1.23:
   version "3.1.52"
   resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-3.1.52.tgz#4053bd0261c31d6081687c9d02656fba0fe39aa5"
   integrity sha512-tY469i4QRV1PwM9BoL+HdKYBCJ83IQl3PmUNapG/Hxp0MIYIw1hINU8E+Edf5Kr8vHXfVzPqDoul/Abu2P0vkw==
@@ -10966,7 +10966,7 @@ next@^13.0.6:
     "@next/swc-win32-ia32-msvc" "13.1.6"
     "@next/swc-win32-x64-msvc" "13.1.6"
 
-next@^13.1.7-canary.21, next@^13.1.7-canary.7:
+next@^13.1.7-canary.21:
   version "13.1.7-canary.21"
   resolved "https://registry.yarnpkg.com/next/-/next-13.1.7-canary.21.tgz#eb795fe5c3d2393394cb67c3623f2a8db07a9e9d"
   integrity sha512-uuPJG7XESnr5xupNumU61udF2ApiH+MP7Cc7CfL1zEzhqJGIEscI4BZZcv3QTSPgy9c3CNJoxuYxaa1DQ8tzmQ==

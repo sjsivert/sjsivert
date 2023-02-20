@@ -1,3 +1,10 @@
+## 20.02.2023 - Migrates to Route Handlers + misc
+
+* For both the Next app dir projects
+	* Now using [route handlers](https://beta.nextjs.org/docs/routing/route-handlers) for robots.txt and sitemap.xml
+* Removes the next-sitemap package from `next-website-app-dir`
+* Moves «getBaseUrl» to the «common» package
+
 ## 20.02.2023 - Package updates an bugfixes
 
 * Updates packages to latest versions

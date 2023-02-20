@@ -1,17 +1,15 @@
 import { sanityConfig } from "@/lib/config/envVariables";
-import { getBaseUrl } from "@/lib/utils/url";
 import { getAllArticles } from "common/src/content/sanity/articles";
 import { getAllLandingPagesForSitemap } from "common/src/content/sanity/landingPages";
 import { supportedLanguages } from "common/src/locales/languages";
-import { GetServerSideProps } from "next";
+import { getBaseUrl } from "common/src/utils/url";
 
 interface SitemapField {
 	loc: string;
 	lastmod: string;
 	changefreq: "daily";
 }
-const Sitemap: React.FC = () => null;
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+export async function GET(request: Request) {
 	// Grab all articles
 	const allArticles = await getAllArticles(sanityConfig);
 	// Get all landing pages
@@ -79,14 +77,10 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 	  ${urlArray.join("")}
 	</urlset>`;
 
-	res.setHeader("Cache-Control", "max-age=0, s-maxage=3600");
-	res.setHeader("Content-Type", "application/xml");
-	res.write(body);
-	res.end();
-
-	return {
-		props: {},
+	const headers = {
+		"Cache-Control": "max-age=0, s-maxage=3600",
+		"Content-Type": "application/xml",
 	};
-};
 
-export default Sitemap;
+	return new Response(body, { headers });
+}
