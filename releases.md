@@ -2,6 +2,9 @@
 
 * For both the Next app dir projects
 	* Now using [route handlers](https://beta.nextjs.org/docs/routing/route-handlers) for robots.txt and sitemap.xml
+	* Adds route segment config for «/sitemap.xml» and «/robots.txtx» routes
+		* `/sitemap.xml` - ISR. Revalidates every 24 hour
+		* `/robots.txt` - Static (default)
 * Removes the next-sitemap package from `next-website-app-dir`
 * Moves «getBaseUrl» to the «common» package
 

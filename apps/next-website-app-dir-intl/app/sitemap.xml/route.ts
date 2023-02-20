@@ -9,6 +9,14 @@ interface SitemapField {
 	lastmod: string;
 	changefreq: "daily";
 }
+
+// Invalidate the sitemap every 24 hours, matching the changefreq
+export const revalidate = 86400;
+
+/**
+ * This Route is using ISR and will update the cache every 24 hours (see «revalidate» above)
+ * Returns a sitemap
+ */
 export async function GET(request: Request) {
 	// Grab all articles
 	const allArticles = await getAllArticles(sanityConfig);
