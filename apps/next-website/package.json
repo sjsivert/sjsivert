@@ -21,7 +21,6 @@
 		"@portabletext/types": "^2.0.0",
 		"common": "*",
 		"next": "^13.0.6",
-		"next-sanity": "^1.1.0",
 		"next-sanity-image": "^5.0.0",
 		"next-seo": "^5.5.0",
 		"next-sitemap": "^3.1.23",

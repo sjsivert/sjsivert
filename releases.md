@@ -1,3 +1,9 @@
+## 20.02.2023 - Package updates an bugfixes
+
+* Updates packages to latest versions
+* `next-website-app-dir-intl` is now on the latest next@canary
+* Fixes a bug in `next-website-app-dir-intl`where `generateMetadata` was implemented wrong
+
 ## 17.02.2023 - Sitemap updates and misc
 
 * middleware now ignores `/sitemap.xml` and `/robots.txt`

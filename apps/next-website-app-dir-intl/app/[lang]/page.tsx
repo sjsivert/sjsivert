@@ -12,9 +12,9 @@ export const revalidate = 3600;
 
 // SEO
 // This is a "magic" Next function, see https://beta.nextjs.org/docs/guides/seo
-export async function generateMetadata(lang: string) {
+export async function generateMetadata({ params }: { params: BaseParams }) {
 	const preview = previewData() ? true : false;
-	const page = await getData(lang, preview);
+	const page = await getData(params.lang, preview);
 	if (page) {
 		return { title: page.title, description: page.description };
 	}

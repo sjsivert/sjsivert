@@ -8,7 +8,7 @@ const config = {
 	preprocess: preprocess({ postcss: true }),
 
 	kit: {
-		adapter: adapter({ edge: true }),
+		adapter: adapter({ runtime: "edge" }),
 		env: {
 			// The prefix used by public (available in the client) env variables
 			// See the .env.example file for an example
