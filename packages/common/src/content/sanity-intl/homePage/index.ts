@@ -31,7 +31,6 @@ export async function getHomePageDocuments(
 	preview: boolean
 ): Promise<Array<LandingPageBase>> {
 	const data = await getSanityClient(config, preview).fetch<Array<LandingPageBaseSanityData>>(homePageGroq);
-
 	// handle locales
 	return data.map((page) => {
 		return handleLocalizationForLandingPage(page, lang);

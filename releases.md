@@ -1,3 +1,10 @@
+## 22.02.2023 - Localization SvelteKit
+
+* Introduces a new project `web-sveltekit-intl`. This is a fully localized SvelteKit project. It uses the same architecture as the localized Next project. Please read : [docs/localization.md](docs/localization.md) to get a better understanding on how this works.
+* Adds some basic styling for both SvelteKit projects
+* Fixes a PortableText bug by upgrading the Sanity PortableText package to the latest major version.
+* Other updates and fixes for both SvelteKit projects
+
 ## 20.02.2023 - Migrates to Route Handlers + misc
 
 * For both the Next app dir projects

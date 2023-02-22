@@ -10,6 +10,8 @@ This document will explain the philosophy and architecture behind the localizati
 
 ## Localization - Architecture and overall approach
 
+> ⚠️ This approch for localization will not work for statically generated sites since it depends on middleware for Next and server hooks for SvelteKit. If you need to create a static site, it's usually better to use something like Astro or similar.
+
 Localization can be somewhat complicated when working in a team with multiple people. The localization setup for the projects above is an attempt at making an understandable, robust and scalable architecture for supporting multiple languages in Sanity and for the website projects.
 
 To achieve this we need some goals to aim for:
@@ -184,6 +186,7 @@ Since the middleware/hook runs before all routes, a click on the link `/articles
 
 **Current limitations**
 
-Take a look at `/apps/next-website-app-dir-intl/lib/components/mainMenu/index.tsx`
+(The is a Next spesific limitation) 
+Take a look at `/apps/next-website-app-dir-intl/lib/components/mainMenu/index.tsx`. The language picker does not preserve the path, it will always send you back to the home page. This can be fixed by using a client component to get the path. But, it has been intentionally been left out for now to avoid client components.
 
-The language picker does not preserve the path, it will always send you back to the home page. This can be fixed by using a client component to get the path. But, it has been intentionally been left out for now to avoid client components.
+In the SvelteKit project, the current route is preserved when swapping the locale.

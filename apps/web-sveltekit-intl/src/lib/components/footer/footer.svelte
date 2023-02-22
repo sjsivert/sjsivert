@@ -4,7 +4,7 @@
 	export let footerData: Footer;
 </script>
 
-<footer class="footer bg-base-200 text-base-content w-full p-10">
+<footer class="footer w-full bg-base-200 p-10 text-base-content">
 	<div>
 		<span class="footer-title">Links</span>
 		{#each footerData.footerLinks as link}

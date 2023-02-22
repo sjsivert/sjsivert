@@ -1,5 +1,6 @@
 <script lang="ts">
 	// Imports
+	import LocalePicker from "./localePicker.svelte";
 	import MainMenuItem from "./mainMenuItem.svelte";
 	import type { MainMenu } from "common/src/types/sanity/allPages/mainMenu";
 
@@ -36,6 +37,7 @@
 				{#each mainMenuData.menuItems as mainMenuItem}
 					<MainMenuItem {mainMenuItem} />
 				{/each}
+				<LocalePicker />
 			</ul>
 		</div>
 	</nav>

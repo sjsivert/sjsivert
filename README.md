@@ -29,6 +29,7 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. I
 - `/apps/sanity-studio-intl`: Sanity Studio with localization support
 - `/apps/storybook`: A Storybook setup for testing ui components
 - `/apps/web-sveltekit`: A SvelteKit website
+- `/apps/web-sveltekit-intl`: A SvelteKit website with localization support
 - `/packages/common`: Utils that are used in multiple apps
 - `/packages/ui`: React UI components
 
