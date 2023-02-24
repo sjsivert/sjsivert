@@ -7,7 +7,7 @@
 	import "@svelteness/kit-docs/client/styles/vars.css";
 
 	import { page } from "$app/stores";
-	import DocumentIcon from "$img/document.svg?raw";
+	import ManTyping from "$img/man-typing.png";
 	import { SocialLink } from "@svelteness/kit-docs";
 
 	import { Button, KitDocs, KitDocsLayout, createSidebarContext } from "@svelteness/kit-docs";
@@ -45,8 +45,8 @@
 		<div class="logo" slot="navbar-left">
 			<Button href="/">
 				<div class="logo-wrapper">
-					{@html DocumentIcon}
-					<span>Template Repo Docs</span>
+					<img src={ManTyping} width="40" alt="Logo" />
+					<span style="padding-top: 10px; text-transform: uppercase;">Template Repo Docs</span>
 				</div>
 			</Button>
 		</div>
