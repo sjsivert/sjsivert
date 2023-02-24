@@ -1,3 +1,7 @@
+## 24.02.2023 - Documentation site
+
+- Introduces a separate documentation site (under construction)
+
 ## 24.02.2023 - Next 13.2
 
 > No longer in Canary: The Metadata API (SEO), Route Handler (Server routes, see robots.txt)
