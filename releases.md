@@ -1,33 +1,42 @@
+## 24.02.2023 - Next 13.2
+
+> No longer in Canary: The Metadata API (SEO), Route Handler (Server routes, see robots.txt)
+
+- Upgrades all Next projects to Next 13.2
+  - next-website
+  - next-website-app-dir
+  - next-website-app-dir-intl
+
 ## 22.02.2023 - Localization SvelteKit
 
-* Introduces a new project `web-sveltekit-intl`. This is a fully localized SvelteKit project. It uses the same architecture as the localized Next project. Please read : [docs/localization.md](docs/localization.md) to get a better understanding on how this works.
-* Adds some basic styling for both SvelteKit projects
-* Fixes a PortableText bug by upgrading the Sanity PortableText package to the latest major version.
-* Other updates and fixes for both SvelteKit projects
+- Introduces a new project `web-sveltekit-intl`. This is a fully localized SvelteKit project. It uses the same architecture as the localized Next project. Please read : [docs/localization.md](docs/localization.md) to get a better understanding on how this works.
+- Adds some basic styling for both SvelteKit projects
+- Fixes a PortableText bug by upgrading the Sanity PortableText package to the latest major version.
+- Other updates and fixes for both SvelteKit projects
 
 ## 20.02.2023 - Migrates to Route Handlers + misc
 
-* For both the Next app dir projects
-	* Now using [route handlers](https://beta.nextjs.org/docs/routing/route-handlers) for robots.txt and sitemap.xml
-	* Adds route segment config for «/sitemap.xml» and «/robots.txtx» routes
-		* `/sitemap.xml` - ISR. Revalidates every 24 hour
-		* `/robots.txt` - Static (default)
-* Removes the next-sitemap package from `next-website-app-dir`
-* Moves «getBaseUrl» to the «common» package
+- For both the Next app dir projects
+  - Now using [route handlers](https://beta.nextjs.org/docs/routing/route-handlers) for robots.txt and sitemap.xml
+  - Adds route segment config for «/sitemap.xml» and «/robots.txtx» routes
+    - `/sitemap.xml` - ISR. Revalidates every 24 hour
+    - `/robots.txt` - Static (default)
+- Removes the next-sitemap package from `next-website-app-dir`
+- Moves «getBaseUrl» to the «common» package
 
 ## 20.02.2023 - Package updates and bugfixes
 
-* Updates packages to latest versions
-* `next-website-app-dir-intl` is now on the latest next@canary
-* Fixes a bug in `next-website-app-dir-intl`where `generateMetadata` was implemented wrong
+- Updates packages to latest versions
+- `next-website-app-dir-intl` is now on the latest next@canary
+- Fixes a bug in `next-website-app-dir-intl`where `generateMetadata` was implemented wrong
 
 ## 17.02.2023 - Sitemap updates and misc
 
-* middleware now ignores `/sitemap.xml` and `/robots.txt`
-* robots.txt and sitemap.xml is implemented using pages routes (will be switched to Routing Handlers when stable)
-* removes the «next-sitemap» package
-* node-fetch gets added to «serverComponentsExternalPackages» (next.config)
-* Locks the next.js version to `13.1.7-canary.10`, since canary 11 and above is causing build problems
+- middleware now ignores `/sitemap.xml` and `/robots.txt`
+- robots.txt and sitemap.xml is implemented using pages routes (will be switched to Routing Handlers when stable)
+- removes the «next-sitemap» package
+- node-fetch gets added to «serverComponentsExternalPackages» (next.config)
+- Locks the next.js version to `13.1.7-canary.10`, since canary 11 and above is causing build problems
 
 ## 17.02.2023 - Localization
 
