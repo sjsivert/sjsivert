@@ -19,7 +19,12 @@
 
 	/** @type {import('@svelteness/kit-docs').NavbarConfig} */
 	const navbar = {
-		links: [],
+		links: [
+			{
+				title: "Releases",
+				slug: "https://github.com/makingwaves/sanity-next-component-template-repo/blob/main/releases.md",
+			},
+		],
 	};
 
 	const { activeCategory } = createSidebarContext(sidebar);
@@ -50,7 +55,7 @@
 				</div>
 			</Button>
 		</div>
-		<div slot="navbar-right">
+		<div slot="navbar-right-alt">
 			<SocialLink type="gitHub" href="https://github.com/makingwaves/sanity-next-component-template-repo" />
 		</div>
 
