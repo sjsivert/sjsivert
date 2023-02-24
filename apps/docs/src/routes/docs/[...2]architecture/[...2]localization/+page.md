@@ -1,3 +1,7 @@
+---
+title: Localization
+---
+
 <script>
 	import diagramImg from "../assets/loc_diagram_img.png";
 </script>
@@ -10,11 +14,15 @@ This document will explain the philosophy and architecture behind the localizati
 -   `/apps/sanity-studio-intl`
 -   `/apps/web-sveltekit-intl`
 
-> 💡 Tip: It might be useful to read the [foundational philosophy for the repo](background.md) first, in order to get a better understanding of the background and ideas on which all the projects in this repo has been built.
+:::admonition type="tip"
+It might be useful to read the [foundational philosophy for the repo](background.md) first, in order to get a better understanding of the background and ideas on which all the projects in this repo has been built.
+:::
 
 ## Localization - Architecture and overall approach
 
-> ⚠️ This approach for localization will not work for statically generated sites since it depends on middleware for Next and server hooks for SvelteKit. If you need to create a static site, it's usually better to use something like Astro or similar.
+:::admonition type="warning"
+This approach for localization will not work for statically generated sites since it depends on middleware for Next and server hooks for SvelteKit. If you need to create a static site, it's usually better to use something like Astro or similar.
+:::
 
 Localization can be somewhat complicated when working in a team with multiple people. The localization setup for the projects above is an attempt at making an understandable, robust and scalable architecture for supporting multiple languages in Sanity and for the website projects.
 
@@ -171,7 +179,9 @@ The approach used in the template repo do NOT require links to include the local
 
 **How the heck does localization work without passing the locale**
 
-> 🤓 This section is a bit technical and requires some understanding about how middleware works in Next or hooks work in SveltKit.
+:::admonition type="info"
+🤓 This section is a bit technical and requires some understanding about how middleware works in Next or hooks work in SveltKit.
+:::
 
 Take a look at `/apps/next-website-app-dir-intl/middleware.ts`.
 This is based in the middleware example from Vercel found [here](https://beta.nextjs.org/docs/guides/internationalization#routing-overview), but it has been significantly altered and upgraded.

@@ -15,7 +15,9 @@ This repository is intended as inspiration or a starter template to get rolling 
 -   Run `yarn install`
 -   Run Storybook `yarn storybook`
 
-> There is a VSCode setting for handling `@tailwind` directives in the styles/index.css file.
+:::admonition type="info"
+There is a VSCode setting for handling `@tailwind` directives in the styles/index.css file.
+:::
 
 Storybook needs to be installed into a project that is already set up with a framework. Storybook will look into your project's dependencies during its install process and detect that React is percent and provide you with the best configuration available.
 

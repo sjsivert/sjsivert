@@ -1,8 +1,14 @@
+---
+title: Introduction
+---
+
 ## Introduction
 
 This monorepo (using Turborepo) is meant as a template for creating new projects when working with Sanity, Next.js (or SvelteKit) and React/Svelte components. The repo is meant as a "guide" for how to structure your apps and packages. You _can_ clone the repo and adjust it to your needs, but it's probably better to start your own monorepo and pick individual parts from this repo.
 
-> PS: All the apps, packages and documentation assumes that you have at least some knowledge of how to work with both Sanity, React, SvelteKit or Next projects. This is not a "getting started" ...thing 🤓
+:::admonition type="info"
+All the apps, packages and documentation assumes that you have at least some knowledge of how to work with both Sanity, React, SvelteKit or Next projects. This is not a "getting started" ...thing 🤓
+:::
 
 ## Releases
 

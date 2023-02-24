@@ -1,3 +1,7 @@
+---
+title: Next.js Apps
+---
+
 ## Next.js apps
 
 There are 3 Next.js projects/apps.
@@ -6,11 +10,15 @@ There are 3 Next.js projects/apps.
 -   **next-website-app-dir** - Uses the app router
 -   **next-website-app-dir-intl** - Uses the app router and has localization support
 
-> 💡 When the document refers to a project using the pages router, it's the first project above. The other two projects are referred to as the app router projects.
+:::admonition type="tip"
+When the document refers to a project using the _pages router_, it's the first project above. The other two projects are referred to as the _app router_ projects.
+:::
 
 ## Getting started
 
-> 💡 You need to setup you own Sanity instance and add the config to the project in order to run it.
+:::admonition type="info"
+You need to setup you own Sanity instance and add the config to the project in order to run it.
+:::
 
 To run the project locally, first create a file called `.env.local`. You can copy the env vars from `.env.example`. All the values for the Sanity variables you'll find when setting up your Sanity project ([see the Sanity documentation](/docs/apps/sanity-studio)).
 
@@ -42,7 +50,9 @@ Note that the Edge debugger requires the [Edge Tools for VSCode](https://marketp
     -   `Next: Node Windows` - Runs the Next server
     -   `Next: Full (Windows)` - Runs the server and opens the site in the Edge browser
 
-> If you want to use Chrome instead of Edge, you can create a new launch script for that.
+:::admonition type="tip"
+If you want to use Chrome instead of Edge, you can create a new launch script for that.
+:::
 
 ## Structure
 
@@ -71,7 +81,9 @@ Sanity preview works by calling an api route (`pages/api/preview/index.ts`) from
 
 This section is about serializing Sanity components into React components.
 
-> Please see the [Sanity documentation](/docs/apps/sanity-studio) about components to get an overview of the fundamental differences between the different types of components.
+:::admonition type="info"
+Please see the [Sanity documentation](/docs/apps/sanity-studio) about components to get an overview of the fundamental differences between the different types of components.
+:::
 
 There are two serializers, one for portable text and one for landing page components. For this example, global components can only appear as landing page components.
 
@@ -108,7 +120,9 @@ This has been implemented for all pages in the projects using the app router. Fo
 
 ## Running Playwright end-to-end tests
 
-> Not implemented in all Next projects
+:::admonition type="info"
+Not implemented in all Next projects
+:::
 
 More info about Playwright here: [https://playwright.dev/](https://playwright.dev/)
 

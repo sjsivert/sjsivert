@@ -1,3 +1,7 @@
+---
+title: UI
+---
+
 ## UI
 
 This package contains React UI components. These are used both in Storybook and by the Next projects.
