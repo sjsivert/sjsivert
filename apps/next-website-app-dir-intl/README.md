@@ -1,13 +1,5 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Next.js project
 
-## Getting Started
+This is a Next.js project based on the app router and has been setup up for localization
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-See the [docs folder](docs) more additional documentation
+See the [documentation site](https://template-docs.vercel.app) for full docs.

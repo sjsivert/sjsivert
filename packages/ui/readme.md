@@ -1,5 +1,3 @@
-## Next.js project
-
-This is a Next.js project based on the app router
+This is a UI library for React components
 
 See the [documentation site](https://template-docs.vercel.app) for full docs.
