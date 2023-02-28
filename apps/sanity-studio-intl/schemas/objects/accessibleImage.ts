@@ -52,11 +52,13 @@ export default defineType({
 	preview: {
 		select: {
 			title: "alt",
+			image: "asset",
 		},
 		prepare(selection) {
-			const { title } = selection;
+			const { title, image } = selection;
 			return {
 				title: `Image - ${title}`,
+				media: image,
 			};
 		},
 	},
