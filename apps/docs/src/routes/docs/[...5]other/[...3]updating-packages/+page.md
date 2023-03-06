@@ -1,6 +1,8 @@
 ---
-title: Updating packages
+title: Packages (Yarn)
 ---
+
+## Working with Yarn packages (node modules)
 
 The monorepo uses [Yarn Workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/) to handle packages (node modules).
 

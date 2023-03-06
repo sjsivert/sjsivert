@@ -6,4 +6,4 @@ title: Configuration
 
 -   Prettier
 -   tsconfig
--   ...
+-   tailwind
