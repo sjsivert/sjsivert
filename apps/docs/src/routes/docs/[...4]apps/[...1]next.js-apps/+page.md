@@ -136,4 +136,4 @@ To run the tests use `yarn test:pw` or use the VSCode plugin.
 
 The project named `apps/next-website-app-dir-intl` features localization support.
 
-The main new feature is that all localized routes are placed under the `[lang]` route. This means that all pages within this route will receive a `lang` parameter which can be used to fetch localized data from Sanity or any other source.
+The main new feature is that all localized routes are placed under the `[lang]` route. This means that all pages within this route will receive a `lang` parameter which can be used to fetch localized data from Sanity or any other source. For a more in depth description on how localization works, see the [localization architecture document](/docs/architecture/localization).

@@ -10,6 +10,8 @@ title: Localization
 
 This document will explain the philosophy and architecture behind the localization setup for the following projects:
 
+> This document does not cover localization for Next projects using the pages dir since the pages dir is outgoing.
+
 -   `/apps/next-website-app-dir-intl`
 -   `/apps/sanity-studio-intl`
 -   `/apps/web-sveltekit-intl`

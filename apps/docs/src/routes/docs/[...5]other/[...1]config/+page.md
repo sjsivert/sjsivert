@@ -2,4 +2,8 @@
 title: Configuration
 ---
 
-## Configuration
+...coming soon
+
+-   Prettier
+-   tsconfig
+-   ...
