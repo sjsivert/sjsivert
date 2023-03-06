@@ -1,10 +1,13 @@
-import { BASIC_AUTH_LOGIN } from "$env/static/private";
+import { BASIC_AUTH_LOGIN, SKIP_AUTH } from "$env/static/private";
 import type { Handle } from "@sveltejs/kit";
 
 /**
  * Handles Basic auth for the entire site
  */
 export const handle: Handle = async ({ event, resolve }) => {
+	if (SKIP_AUTH === "true") {
+		return resolve(event);
+	}
 	const auth = event.request.headers.get("Authorization");
 
 	if (auth !== `Basic ${btoa(BASIC_AUTH_LOGIN)}`) {
