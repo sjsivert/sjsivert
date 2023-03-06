@@ -1,4 +1,5 @@
 import type { SanityConfig } from "@/clients/config";
+
 import { getSanityClient } from "@/clients/sanityClient";
 
 import { Article } from "@/types/sanity/article";

@@ -1,6 +1,6 @@
+import type { SanityConfig } from "@/clients/config";
 import SchemaType from "@/sanity/SchemaType";
 
-import type { SanityConfig } from "@/clients/config";
 import { getSanityClient } from "@/clients/sanityClient";
 
 import { MainMenuAndFooter } from "@/types/sanity/allPages";
