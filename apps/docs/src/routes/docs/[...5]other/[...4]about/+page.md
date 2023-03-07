@@ -9,7 +9,7 @@ This documentation site contains all documentation for the NoA Ignite Template r
 The purpose is twofold:
 
 1. Provide documentation for the packages, apps, and the [template repo itself](https://github.com/makingwaves/sanity-next-component-template-repo).
-2. Proved a demo setup for a documentation project.
+2. Provide a demo setup for a documentation project.
 
 :::admonition type="info"
 This documentation is build using [KitDocs](https://kit-docs.svelteness.dev), which is a theme and a setup on top of SvelteKit.
