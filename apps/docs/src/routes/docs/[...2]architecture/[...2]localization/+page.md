@@ -17,7 +17,7 @@ This document will explain the philosophy and architecture behind the localizati
 -   `/apps/web-sveltekit-intl`
 
 :::admonition type="tip"
-It might be useful to read the [foundational philosophy for the repo](background.md) first, in order to get a better understanding of the background and ideas on which all the projects in this repo has been built.
+It might be useful to read the [foundational philosophy for the repo](/docs/architecture/background) first, in order to get a better understanding of the background and ideas on which all the projects in this repo has been built.
 :::
 
 ## Localization - Architecture and overall approach
