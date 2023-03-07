@@ -7,7 +7,7 @@ title: Quickstart
 -   clone the repo
 -   delete the `.git` folder at the root of the project
 -   delete any apps or packages you don't need
--   configure you own Sanity instance and add env variables ([more info](/docs/apps/sanity-studio))
+-   configure your own Sanity instance and add env variables ([more info](/docs/apps/sanity-studio))
 -   run `yarn install`
     -   _I know, you don't actually need the `install` keyword...it just makes it less confusing to type it out_
 
