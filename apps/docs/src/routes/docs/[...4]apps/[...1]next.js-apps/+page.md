@@ -96,7 +96,6 @@ For an introduction to portable text, Sanity ha written up an [introduction arti
 ### Sitemaps
 
 > PS: The robots.txt is set to not allow indexing since this is a demo repo. You should probably change this.
-> See `next-sitemap.config.js` «policies»
 
 **Pages router**
 

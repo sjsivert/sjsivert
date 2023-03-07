@@ -72,7 +72,7 @@ The [template project in the Github repository](https://github.com/makingwaves/s
 :::admonition type="note"
 If you're an experienced JS or CSS developer you might be thinking right now that you have already figured out the most efficient way of structuring a project and writing code. And you might be right... Your way of writing CSS or JS might actually be faster and "better", as long as you are the one doing the development.
 
-However, this is about finding tools and method for an **entire team of different people**, and making everyone as comfortable and as efficient as possible.
+However, this is about finding tools and methods for an **entire team of different people**, and making everyone as comfortable and as efficient as possible.
 :::
 
 ## Components - The Lego™ approach
