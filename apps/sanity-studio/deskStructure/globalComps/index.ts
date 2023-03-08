@@ -16,9 +16,7 @@ const deskItems = (S: StructureBuilder) =>
 		return S.listItem()
 			.title(item.title)
 			.icon(item.icon || AiOutlineFolder)
-			.child(
-				S.documentTypeList(item.schemaType).title(item.title).filter(`_type == "${item.schemaType}"`)
-			);
+			.child(S.documentTypeList(item.schemaType).title(item.title).filter(`_type == "${item.schemaType}"`));
 	});
 
 export const globalComponentsStructure = (S: StructureBuilder) =>

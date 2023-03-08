@@ -16,10 +16,7 @@ export default defineType({
 			title: "Menu items",
 			description: "Add, remove and edit menu items.",
 			type: "array",
-			of: [
-				{ type: SchemaType.MAIN_MENU_ITEM_OBJECT },
-				{ type: SchemaType.MAIN_MENU_ACTION_ITEM_OBJECT },
-			],
+			of: [{ type: SchemaType.MAIN_MENU_ITEM_OBJECT }, { type: SchemaType.MAIN_MENU_ACTION_ITEM_OBJECT }],
 			validation: (Rule: ArrayRule<ReferenceRule>) =>
 				Rule.required().min(1).error("At least 1 component must be added"),
 		}),

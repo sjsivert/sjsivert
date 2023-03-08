@@ -39,9 +39,7 @@ export default defineType({
 					scheme: ["https", "http", "mailto", "tel"],
 				})
 					.required()
-					.error(
-						"Call to action bar: A relative or absolute url is required for the «call to action url»"
-					),
+					.error("Call to action bar: A relative or absolute url is required for the «call to action url»"),
 		}),
 		defineField({
 			name: "backgroundColor",

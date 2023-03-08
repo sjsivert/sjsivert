@@ -60,9 +60,7 @@ export default defineType({
 				],
 			},
 			validation: (Rule: StringRule) =>
-				Rule.required().error(
-					"Hero Component: Please select a purpose for the «Usage or purpose» field"
-				),
+				Rule.required().error("Hero Component: Please select a purpose for the «Usage or purpose» field"),
 		}),
 		defineField({
 			name: "colorScheme",
@@ -77,8 +75,7 @@ export default defineType({
 					{ title: "Dark", value: "dark" },
 				],
 			},
-			validation: (Rule: StringRule) =>
-				Rule.required().error("Hero Component: Please select a color scheme"),
+			validation: (Rule: StringRule) => Rule.required().error("Hero Component: Please select a color scheme"),
 		}),
 		defineField({
 			type: SchemaType.ACCESSIBLE_IMAGE_INTL,
@@ -146,9 +143,7 @@ export default defineType({
 					scheme: ["https", "http", "mailto", "tel"],
 				})
 					.required()
-					.error(
-						"Hero Component: A relative or absolute url is required for the «Call to action url»"
-					),
+					.error("Hero Component: A relative or absolute url is required for the «Call to action url»"),
 		}),
 	],
 	preview: {

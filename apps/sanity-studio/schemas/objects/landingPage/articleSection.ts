@@ -37,8 +37,7 @@ export default defineType({
 			type: "text",
 			description: "This is the articles section description",
 			fieldset: "header",
-			validation: (Rule: TextRule) =>
-				Rule.required().error("Article section: The description is required"),
+			validation: (Rule: TextRule) => Rule.required().error("Article section: The description is required"),
 		}),
 		defineField({
 			name: "articleReferences",

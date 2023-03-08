@@ -1,6 +1,12 @@
+## 08.03.2023 - Prettier config
+
+- The prettier config is now shared between all projects
+- Formats files not using the shared prettier config
+- Adds documentation for the prettier config setup
+
 ## 24.02.2023 - Documentation site
 
-- Introduces a separate documentation site (under construction)
+- Introduces a separate documentation site project
 
 ## 24.02.2023 - Next 13.2
 

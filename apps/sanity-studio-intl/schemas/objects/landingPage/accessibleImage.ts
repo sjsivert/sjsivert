@@ -24,12 +24,7 @@ interface Context {
  */
 export function accessibleImageValidator(Rule: any) {
 	return Rule.custom((fields: AccessibleImage, context: Context) => {
-		if (
-			fields &&
-			fields.asset &&
-			fields.asset._ref &&
-			typeof fields.alt[getDefaultLanguage().id] === "string"
-		) {
+		if (fields && fields.asset && fields.asset._ref && typeof fields.alt[getDefaultLanguage().id] === "string") {
 			return true;
 		}
 		return `${context.type.title}: The image and an alt text is required`;

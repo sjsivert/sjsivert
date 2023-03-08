@@ -16,10 +16,7 @@ export default function ArticleComponent({ articlePageDocument }: Props): JSX.El
 	return (
 		<div>
 			<h1>{articlePageDocument.title}</h1>
-			<PortableText
-				value={articlePageDocument.blocks.body}
-				components={portableTextArticleComponents}
-			/>
+			<PortableText value={articlePageDocument.blocks.body} components={portableTextArticleComponents} />
 		</div>
 	);
 }

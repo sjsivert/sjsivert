@@ -21,13 +21,7 @@ export const metadata = {
 	},
 };
 
-export default async function RootLayout({
-	children,
-	params,
-}: {
-	children: React.ReactNode;
-	params: BaseParams;
-}) {
+export default async function RootLayout({ children, params }: { children: React.ReactNode; params: BaseParams }) {
 	const preview = previewData() ? true : false;
 	const mainMenuAndFooterData = await fetchData(params.lang);
 

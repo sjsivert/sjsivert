@@ -13,8 +13,6 @@ For all releases, please see the [release log](releases.md)
 ## Documentation
 
 - Documentation for the different apps and packages can be found here [https://template-docs.vercel.app](https://template-docs.vercel.app).
-  - username: `noa`
-  - password: `letmein`
 - For how to use Turborepo, please refer to the [Turborepo documentation](https://turborepo.org/docs).
 
 ## What's inside?

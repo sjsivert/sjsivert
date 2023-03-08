@@ -13,8 +13,7 @@ export const serverSideEnvironmentVariables = {
 
 export const clientSideEnvironmentVariables = {
 	// Sanity
-	sanityProjectId:
-		process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? logUndefinedEnv("NEXT_PUBLIC_SANITY_PROJECT_ID"),
+	sanityProjectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? logUndefinedEnv("NEXT_PUBLIC_SANITY_PROJECT_ID"),
 	sanityDataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? logUndefinedEnv("NEXT_PUBLIC_SANITY_DATASET"),
 };
 

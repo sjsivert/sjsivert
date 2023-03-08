@@ -9,6 +9,4 @@ export const collectionsStructure = (S: StructureBuilder) =>
 		.title(articleCollectionsUrlPathTitle)
 		.schemaType(SchemaType.ARTICLE_COLLECTION_URL_PATH)
 		.icon(AiFillFolder)
-		.child(
-			S.documentTypeList(SchemaType.ARTICLE_COLLECTION_URL_PATH).title(articleCollectionsUrlPathTitle)
-		);
+		.child(S.documentTypeList(SchemaType.ARTICLE_COLLECTION_URL_PATH).title(articleCollectionsUrlPathTitle));
