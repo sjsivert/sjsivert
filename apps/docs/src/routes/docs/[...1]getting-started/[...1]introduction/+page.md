@@ -4,7 +4,7 @@ title: Introduction
 
 ## Introduction
 
-This monorepo (using [Turborepo](https://turbo.build/)) is meant as a template for creating new projects when working with Sanity, Next.js (or SvelteKit) and React/Svelte components and more. The repo is also intended as a "guide" for how to structure your apps and packages.
+The Noa Ignite template monorepo (using [Turborepo](https://turbo.build/)) is meant as a template for creating new projects when working with Sanity, Next.js (or SvelteKit) and React/Svelte components and more. The repo is also intended as a "guide" for how to structure your apps and packages.
 
 :::admonition type="info"
 All the apps, packages and documentation assumes that you have at least some knowledge of how to work with both Sanity, React, SvelteKit or Next projects. This is not a "getting started" ...thing 🤓

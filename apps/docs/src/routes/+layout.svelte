@@ -51,7 +51,7 @@
 			<Button href="/">
 				<div class="logo-wrapper">
 					<img src={ManTyping} width="40" alt="Logo" />
-					<span style="padding-top: 10px; text-transform: uppercase;">Template Repo Docs</span>
+					<span style="padding-top: 10px; text-transform: uppercase;">NOA Ignite Template Repo</span>
 				</div>
 			</Button>
 		</div>
