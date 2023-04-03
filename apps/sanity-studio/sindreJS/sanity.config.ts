@@ -6,10 +6,10 @@ import { deskTool } from "sanity/desk";
 
 export default defineConfig({
 	name: "default",
-	title: "sindreJS",
+	title: "noa-template-studio",
 
-	projectId: "63j90etf",
-	dataset: "production",
+	projectId: "0tejmv10",
+	dataset: "development",
 
 	plugins: [deskTool({ structure }), visionTool()],
 
