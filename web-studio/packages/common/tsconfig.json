@@ -1,0 +1,15 @@
+{
+	"extends": "../../packages/tsconfig/react-library.json",
+	"include": ["."],
+	"exclude": ["dist", "build", "node_modules"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/types/*": ["src/types/*"],
+			"@/clients/*": ["src/clients/*"],
+			"@/content/*": ["src/content/*"],
+			"@/utils/*": ["src/utils/*"],
+			"@/sanity/*": ["src/sanity/*"]
+		}
+	}
+}
